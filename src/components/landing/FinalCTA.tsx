@@ -9,12 +9,12 @@ export const FinalCTA = () => {
       <CrownIcon className="hidden md:block absolute left-6 lg:left-20 top-1/2 -translate-y-1/2 h-32 w-32 lg:h-44 lg:w-44 text-gold/40" />
       <TrophyOutlineIcon className="hidden md:block absolute right-6 lg:right-20 top-1/2 -translate-y-1/2 h-32 w-32 lg:h-44 lg:w-44 text-gold/40" />
 
-      <div className="container mx-auto px-4 md:px-6 text-center max-w-3xl relative">
+      <div className="container mx-auto px-4 md:px-6 text-center max-w-2xl relative">
         <h2 className="font-display text-3xl md:text-5xl text-pink-deep leading-tight">
-          ESTÁS A UN CLICK DE PROFESIONALIZAR TUS APUESTAS
+          ESTÁS A UN CLICK DE EMPEZAR
         </h2>
         <p className="mt-5 text-base md:text-lg text-foreground">
-          Únete a una comunidad que prioriza la estrategia sobre la suerte.
+          Entra a mi canal gratuito y empieza a ganar.
         </p>
 
         <div className="mt-10">
@@ -26,9 +26,7 @@ export const FinalCTA = () => {
           </Button>
         </div>
 
-        <p className="mt-5 text-sm text-muted-foreground">
-          Sin suscripciones ocultas. Transparencia total.
-        </p>
+        <p className="mt-5 text-sm text-muted-foreground">Sin pagos. Sin compromiso.</p>
       </div>
     </section>
   );
