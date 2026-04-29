@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { CrownIcon } from "@/components/icons/CrownIcon";
 import { TelegramIcon } from "@/components/icons/TelegramIcon";
-import heroCar from "@/assets/hero-car.jpg";
+import { ImagePlaceholder } from "./ImagePlaceholder";
 
 export const Hero = () => {
   return (
@@ -9,17 +9,14 @@ export const Hero = () => {
       id="inicio"
       className="relative min-h-[600px] md:min-h-[680px] lg:min-h-[760px] overflow-hidden"
     >
-      {/* Background image */}
-      <img
-        src={heroCar}
-        alt="Tipster deportivo NINHOVIEJO con auto de lujo dorado"
-        width={1536}
-        height={1024}
-        className="absolute inset-0 h-full w-full object-cover object-center"
+      {/* Background placeholder */}
+      <ImagePlaceholder
+        label="IMAGEN 1 (Fondo Hero)"
+        className="absolute inset-0 h-full w-full"
       />
 
       {/* Pink gradient overlay (left half) */}
-      <div className="absolute inset-0 bg-gradient-hero md:bg-[linear-gradient(90deg,hsl(var(--primary)/0.9)_0%,hsl(var(--primary)/0.7)_45%,hsl(var(--primary)/0.1)_85%,transparent_100%)]" />
+      <div className="absolute inset-0 bg-gradient-hero md:bg-[linear-gradient(90deg,hsl(var(--primary)/0.92)_0%,hsl(var(--primary)/0.75)_45%,hsl(var(--primary)/0.15)_85%,transparent_100%)]" />
 
       {/* Content */}
       <div className="relative container mx-auto px-4 md:px-6 py-20 md:py-28 lg:py-32 flex items-center min-h-[600px] md:min-h-[680px] lg:min-h-[760px]">
