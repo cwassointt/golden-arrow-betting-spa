@@ -69,7 +69,7 @@ export const Footer = () => {
 
         <div className="mt-12 pt-6 border-t border-border/60 text-center">
           <p className="text-xs tracking-widest text-pink-deep/70">
-            © 2024 NINHOVIEJO — TODOS LOS DERECHOS RESERVADOS
+            © 2024 NINHOVIEJO — JUEGA CON RESPONSABILIDAD
           </p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { CrownSolidIcon } from "@/components/icons/CrownIcon";
 import { CheckCircle2 } from "lucide-react";
-import resultsMoney from "@/assets/results-money.jpg";
+import { ImagePlaceholder } from "./ImagePlaceholder";
 
 type Pick = { match: string; odds: string; units: string };
 
@@ -52,17 +52,10 @@ export const Results = () => {
 
           {/* Right: 40% */}
           <div className="lg:col-span-2">
-            <div className="relative rounded-3xl overflow-hidden shadow-card-soft aspect-[4/5]">
-              <img
-                src={resultsMoney}
-                alt="Tipster contando dinero junto a su auto de lujo dorado"
-                width={1024}
-                height={1280}
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-pink-deep/30 to-transparent" />
-            </div>
+            <ImagePlaceholder
+              label="IMAGEN 2 (Creador/Branding)"
+              className="rounded-3xl shadow-card-soft aspect-[4/5] w-full"
+            />
           </div>
         </div>
       </div>
