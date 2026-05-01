@@ -1,5 +1,4 @@
-import { BarChart3, Target, DollarSign, LucideIcon } from "lucide-react";
-import { CrownSolidIcon } from "@/components/icons/CrownIcon";
+  import { LineChart, ShieldCheck, CheckCircle2, LucideIcon } from "lucide-react";
 
 type Feature = {
   icon: LucideIcon;
@@ -8,31 +7,32 @@ type Feature = {
 };
 
 const features: Feature[] = [
-  { icon: BarChart3, title: "ANÁLISIS REAL", text: "Estudio cada partido a fondo para encontrar el valor." },
-  { icon: Target, title: "PICKS CLAROS", text: "Directos, simples y con estrategia ganadora." },
-  { icon: DollarSign, title: "CANAL GRATIS", text: "Todo el contenido totalmente gratis en Telegram." },
+  { icon: LineChart, title: "ANÁLISIS MATEMÁTICO", text: "No opero por corazonadas. Cada pick es resultado de modelos estadísticos y estudio profundo del mercado." },
+  { icon: ShieldCheck, title: "GESTIÓN DE CAPITAL", text: "Protegemos tu banca y te enseñamos a gestionar tu Stake deportivo inteligentemente a largo plazo." },
+  { icon: CheckCircle2, title: "HISTORIAL VERIFICABLE", text: "Resultados públicos y auditables. Nada de humo, solo rentabilidad pura." },
 ];
 
 export const Features = () => {
   return (
-    <section id="sobre-mi" className="py-20 md:py-28 bg-cream">
+    <section id="sobre-mi" className="py-20 md:py-28 bg-[#FEF2F4]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="font-display text-3xl md:text-5xl text-primary">¿POR QUÉ SEGUIRME?</h2>
-          <CrownSolidIcon className="h-7 w-7 text-gold mx-auto mt-4" />
+          <h2 className="font-display font-black text-3xl md:text-5xl text-[#ED6A8E] uppercase tracking-wide">
+            POR QUÉ MI MÉTODO ES DIFERENTE
+          </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 max-w-6xl mx-auto">
           {features.map(({ icon: Icon, title, text }) => (
             <article
               key={title}
-              className="bg-card rounded-2xl p-8 text-center shadow-card-soft hover:-translate-y-1 hover:shadow-pill transition-all duration-300 group"
+              className="bg-white rounded-2xl p-8 text-center shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
             >
-              <div className="mx-auto h-20 w-20 rounded-full bg-gradient-pink flex items-center justify-center shadow-pill group-hover:scale-110 transition-transform">
-                <Icon className="h-9 w-9 text-primary-foreground" strokeWidth={2.5} />
+              <div className="mx-auto h-16 w-16 rounded-full bg-[#FEF2F4] text-[#ED6A8E] flex items-center justify-center mb-6">
+                <Icon className="h-8 w-8" strokeWidth={2.5} />
               </div>
-              <h3 className="font-display text-xl mt-6 text-primary tracking-wide">{title}</h3>
-              <p className="mt-3 text-muted-foreground leading-relaxed">{text}</p>
+              <h3 className="font-display font-bold text-xl text-gray-900 tracking-wide">{title}</h3>
+              <p className="mt-3 text-gray-600 leading-relaxed font-sans">{text}</p>
             </article>
           ))}
         </div>
