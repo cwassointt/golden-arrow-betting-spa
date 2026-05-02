@@ -1,0 +1,4 @@
+---
+deployment:
+  tasks:
+    - /bin/cp -R dist/* /home/ninhovie/public_html/
