@@ -1,60 +1,84 @@
-import { Button } from "@/components/ui/button";
-import { CrownIcon } from "@/components/icons/CrownIcon";
 import { TelegramIcon } from "@/components/icons/TelegramIcon";
-import { ImagePlaceholder } from "./ImagePlaceholder";
 
 export const Hero = () => {
   return (
-    <section
-      id="inicio"
-      className="relative min-h-[600px] md:min-h-[680px] lg:min-h-[760px] overflow-hidden"
-    >
-      {/* Background placeholder */}
-      <ImagePlaceholder
-        label="IMAGEN 1 (Fondo Hero)"
-        className="absolute inset-0 h-full w-full"
-      />
+      <>
+        <style>{`
+        @keyframes shimmer {
+          0% { background-position: -200% center; }
+          100% { background-position: 200% center; }
+        }
+        .animate-shimmer {
+          animation: shimmer 4s linear infinite;
+          background: linear-gradient(
+            to right,
+            #ffffff 20%,
+            #D4AF37 40%,
+            #D4AF37 60%,
+            #ffffff 80%
+          );
+          background-size: 200% auto;
+          color: transparent;
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
+      `}</style>
 
-      {/* Pink gradient overlay (left half) */}
-      <div className="absolute inset-0 bg-gradient-hero md:bg-[linear-gradient(90deg,hsl(var(--primary)/0.92)_0%,hsl(var(--primary)/0.75)_45%,hsl(var(--primary)/0.15)_85%,transparent_100%)]" />
+        {/* Se eliminó justify-center para que vuelva a la izquierda */}
+        <section className="relative w-full min-h-[650px] bg-gray-300 flex items-center pt-32 pb-16 overflow-hidden">
 
-      {/* Content */}
-      <div className="relative container mx-auto px-4 md:px-6 py-20 md:py-28 lg:py-32 flex items-center min-h-[600px] md:min-h-[680px] lg:min-h-[760px]">
-        <div className="max-w-2xl text-primary-foreground">
-          <CrownIcon className="h-16 w-16 md:h-20 md:w-20 text-gold animate-float drop-shadow-[0_4px_12px_hsl(var(--gold)/0.5)]" />
-
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl mt-6 leading-[0.95]">
-            NINHOVIEJO
-          </h1>
-
-          <p className="font-display text-2xl md:text-3xl lg:text-4xl mt-5 tracking-wide">
-            PICKS DEPORTIVOS
-          </p>
-          <p className="font-display text-2xl md:text-3xl lg:text-4xl mt-1 text-gold-shine animate-shine bg-[length:200%_100%]">
-            CON RESULTADOS REALES
-          </p>
-
-          <p className="mt-6 text-base md:text-lg max-w-md text-primary-foreground/95 leading-relaxed font-medium">
-            Análisis, estrategia y los mejores picks para que ganes tú también.
-          </p>
-
-          <div className="mt-8 flex flex-col items-start gap-4">
-            <Button variant="cta" size="pill-lg" asChild>
-              <a href="https://t.me/" target="_blank" rel="noopener noreferrer">
-                <TelegramIcon className="!size-5" />
-                ENTRAR AL TELEGRAM
-              </a>
-            </Button>
-
-            <a
-              href="#resultados"
-              className="text-sm text-primary-foreground underline underline-offset-4 hover:text-gold transition-colors"
-            >
-              Ver resultados ↓
-            </a>
+          {/* CAPA BASE: IMAGEN 1 (Alineada a la derecha) */}
+          <div className="absolute inset-0 flex items-center justify-end pr-10 md:pr-32 z-0">
+          <span className="text-gray-500 font-bold text-3xl md:text-5xl opacity-40 tracking-widest uppercase text-right">
+            IMAGEN 1 <br/> (Fondo Hero)
+          </span>
           </div>
-        </div>
-      </div>
-    </section>
+
+          {/* CAPA MEDIA: DEGRADADO (Rosa a la izquierda, transparente a la derecha) */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#ED6A8E] via-[#ED6A8E]/95 to-transparent z-10"></div>
+
+          {/* CAPA SUPERIOR: CONTENIDO ALINEADO A LA IZQUIERDA */}
+          <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="max-w-3xl flex flex-col items-start text-left">
+
+              {/* Nombre con efecto Shimmer */}
+              <h2 className="text-2xl md:text-3xl font-black uppercase tracking-widest animate-shimmer mb-4 drop-shadow-md">
+                NINHOVIEJO
+              </h2>
+
+              {/* Título Masivo */}
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tighter leading-[0.85] italic mb-8 uppercase drop-shadow-2xl">
+                HAZ TUS <br /> PICKS DEPORTIVOS <br /> AQUI
+              </h1>
+
+              {/* Caja CTA (Más compacta y en una sola línea) */}
+              <div className="inline-flex items-center bg-white rounded-full p-1.5 pr-2 shadow-2xl gap-3 border border-white/50 transition-all hover:shadow-[0_20px_50px_rgba(237,106,142,0.5)]">
+
+                <div className="pl-4 py-1 flex flex-col justify-center">
+                  {/* whitespace-nowrap evita que el texto salte a otra línea */}
+                  <p className="text-[#ED6A8E] font-black text-sm md:text-base leading-tight uppercase tracking-tight whitespace-nowrap">
+                    Peru #1 Picks deportivos GRATIS
+                  </p>
+                  <p className="text-gray-500 text-xs font-bold mt-0.5 whitespace-nowrap">
+                    Con resultados Reales.
+                  </p>
+                </div>
+
+                {/* Botón más pequeño para encajar perfecto */}
+                <a
+                    href="https://t.me/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-[#ED6A8E] hover:bg-pink-600 text-white font-black uppercase tracking-wider text-xs md:text-sm py-2.5 px-6 rounded-full shadow-md flex items-center justify-center gap-2 transition-transform hover:scale-105 whitespace-nowrap animate-pulse hover:animate-none ml-2"
+                >
+                  <TelegramIcon className="!size-4" />
+                  UNIRME
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </>
   );
 };
