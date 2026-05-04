@@ -25,7 +25,7 @@ export const Hero = () => {
       `}</style>
 
         {/* Se eliminó justify-center para que vuelva a la izquierda */}
-        <section className="relative w-full min-h-[650px] bg-gray-300 flex items-center pt-32 pb-16 overflow-hidden">
+        <section id="inicio" className="relative w-full min-h-[650px] bg-gray-300 flex items-center pt-32 pb-16 overflow-hidden">
 
           {/* CAPA BASE: IMAGEN 1 (Alineada a la derecha) */}
           <div className="absolute inset-0 flex items-center justify-end pr-10 md:pr-32 z-0">
