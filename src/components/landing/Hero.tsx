@@ -1,29 +1,25 @@
 import { TelegramIcon } from "@/components/icons/TelegramIcon";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 export const Hero = () => {
   return (
       <>
-        <style>{`
-        @keyframes shimmer {
-          0% { background-position: -200% center; }
-          100% { background-position: 200% center; }
-        }
-        .animate-shimmer {
-          animation: shimmer 4s linear infinite;
-          background: linear-gradient(
-            to right,
-            #ffffff 20%,
-            #D4AF37 40%,
-            #D4AF37 60%,
-            #ffffff 80%
-          );
-          background-size: 200% auto;
-          color: transparent;
-          -webkit-background-clip: text;
-          background-clip: text;
-        }
-      `}</style>
-
         {/* Se eliminó justify-center para que vuelva a la izquierda */}
         <section id="inicio" className="relative w-full min-h-[650px] bg-gray-300 flex items-center pt-32 pb-16 overflow-hidden">
 
@@ -39,44 +35,49 @@ export const Hero = () => {
 
           {/* CAPA SUPERIOR: CONTENIDO ALINEADO A LA IZQUIERDA */}
           <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="max-w-3xl flex flex-col items-start text-left">
+            <motion.div 
+                className="max-w-3xl flex flex-col items-start text-left"
+                variants={containerVariants}
+                initial="hidden"
+                animate="show"
+            >
 
-              {/* Nombre con efecto Shimmer */}
-              <h2 className="text-2xl md:text-3xl font-black uppercase tracking-widest animate-shimmer mb-4 drop-shadow-md">
+              {/* Nombre con alto contraste (Eyebrow) */}
+              <motion.p variants={itemVariants} className="text-sm font-bold tracking-widest text-white/90 uppercase mb-4 drop-shadow-sm">
                 NINHOVIEJO
-              </h2>
+              </motion.p>
 
-              {/* Título Masivo */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tighter leading-[0.85] italic mb-8 uppercase drop-shadow-2xl">
-                HAZ TUS <br /> PICKS DEPORTIVOS <br /> AQUI
-              </h1>
+              {/* Título Masivo - Restaurando tipografía anterior */}
+              <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-[0.9] italic mb-8 uppercase drop-shadow-2xl">
+                <span className="text-white block">GANA DINERO RÁPIDO, FÁCIL</span>
+                <span className="text-gray-900 block">Y TOTALMENTE GRATIS</span>
+              </motion.h1>
 
-              {/* Caja CTA (Más compacta y en una sola línea) */}
-              <div className="inline-flex items-center bg-white rounded-full p-1.5 pr-2 shadow-2xl gap-3 border border-white/50 transition-all hover:shadow-[0_20px_50px_rgba(237,106,142,0.5)]">
+              {/* Subtítulo y Párrafo */}
+              <motion.h2 variants={itemVariants} className="text-2xl md:text-3xl text-white font-extrabold mb-3">
+                Descubre el método exacto para facturar a diario.
+              </motion.h2>
+              <motion.p variants={itemVariants} className="text-white/90 text-lg max-w-xl mb-8 font-medium">
+                Únete a mi comunidad privada y empieza a ganar dinero hoy mismo <strong className="text-gray-900 font-black">sin pagar un solo centavo.</strong>
+              </motion.p>
 
-                <div className="pl-4 py-1 flex flex-col justify-center">
-                  {/* whitespace-nowrap evita que el texto salte a otra línea */}
-                  <p className="text-[#ED6A8E] font-black text-sm md:text-base leading-tight uppercase tracking-tight whitespace-nowrap">
-                    Peru #1 Picks deportivos GRATIS
-                  </p>
-                  <p className="text-gray-500 text-xs font-bold mt-0.5 whitespace-nowrap">
-                    Con resultados Reales.
-                  </p>
-                </div>
-
-                {/* Botón más pequeño para encajar perfecto */}
+              {/* Botón y Micro-copy */}
+              <motion.div variants={itemVariants}>
                 <a
                     href="https://t.me/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#ED6A8E] hover:bg-pink-600 text-white font-black uppercase tracking-wider text-xs md:text-sm py-2.5 px-6 rounded-full shadow-md flex items-center justify-center gap-2 transition-transform hover:scale-105 whitespace-nowrap animate-pulse hover:animate-none ml-2"
+                    className="w-auto inline-flex items-center px-10 py-4 rounded-full bg-gray-900 hover:bg-black text-white font-extrabold tracking-wide shadow-xl transition-transform hover:scale-105 mb-3 gap-2"
                 >
-                  <TelegramIcon className="!size-4" />
-                  UNIRME
+                  <TelegramIcon className="!size-6 shrink-0" />
+                  UNIRME AL CANAL VIP AHORA
                 </a>
-              </div>
+                <span className="text-xs text-white/80 block font-medium">
+                  🔒 Acceso inmediato y 100% seguro. Cancela cuando quieras.
+                </span>
+              </motion.div>
 
-            </div>
+            </motion.div>
           </div>
         </section>
       </>

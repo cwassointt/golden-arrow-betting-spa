@@ -12,7 +12,7 @@ export const SocialProof = () => {
           {/* Etiqueta de confianza superior */}
           <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-gray-300 text-sm font-bold tracking-widest uppercase mb-8 backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-            La comunidad #1 de PERÚ
+            GANA DINERO SIN PAGAR SUSCRIPCIONES
           </div>
 
           {/* Título Masivo - Estilo PrizePicks Itálico */}
@@ -27,8 +27,8 @@ export const SocialProof = () => {
 
           {/* Subtítulo premium */}
           <p className="mt-10 text-xl md:text-2xl text-gray-400 font-medium max-w-2xl leading-relaxed">
-            Únete al canal privado y recibe los mismos pronósticos que están usando miles de personas para reventar las casas de apuestas.
-            <strong className="text-white ml-2">Totalmente gratis y sin compromisos.</strong>
+            Únete a más de 100,000 personas que ya están multiplicando sus ingresos. Yo te digo exactamente qué hacer para ganar, tú solo copias, pegas y cobras.
+            <strong className="text-white ml-2">Cero pagos mensuales, 100% gratis.</strong>
           </p>
 
           {/* Botón secundario para aprovechar el impulso */}

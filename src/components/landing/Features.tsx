@@ -1,4 +1,4 @@
-  import { LineChart, ShieldCheck, CheckCircle2, LucideIcon } from "lucide-react";
+import { LineChart, ShieldCheck, CheckCircle2, LucideIcon } from "lucide-react";
 
 type Feature = {
   icon: LucideIcon;
@@ -7,9 +7,9 @@ type Feature = {
 };
 
 const features: Feature[] = [
-  { icon: LineChart, title: "ANÁLISIS MATEMÁTICO", text: "No opero por corazonadas. Cada pick es resultado de modelos estadísticos y estudio profundo del mercado." },
-  { icon: ShieldCheck, title: "GESTIÓN DE CAPITAL", text: "Protegemos tu banca y te enseñamos a gestionar tu Stake deportivo inteligentemente a largo plazo." },
-  { icon: CheckCircle2, title: "HISTORIAL VERIFICABLE", text: "Resultados públicos y auditables. Nada de humo, solo rentabilidad pura." },
+  { icon: LineChart, title: "DINERO FÁCIL Y RÁPIDO", text: "No necesitas experiencia. Te doy las instrucciones precisas para que ganes dinero desde el primer día, así de simple." },
+  { icon: ShieldCheck, title: "CERO RIESGOS OCULTOS", text: "Aprende a proteger tu dinero mientras lo multiplicas. Te enseño a operar de forma inteligente para que siempre salgas ganando." },
+  { icon: CheckCircle2, title: "RESULTADOS 100% REALES", text: "Nada de humo. Todo lo que hacemos es público y auditable. Únete y comprueba cómo hacemos dinero todos los días." },
 ];
 
 export const Features = () => {
