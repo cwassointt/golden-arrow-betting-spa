@@ -1,7 +1,8 @@
 import { TelegramIcon } from "@/components/icons/TelegramIcon";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+import heroImage from "@/images/ninhoviejo.webp";
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -12,7 +13,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
@@ -21,17 +22,14 @@ export const Hero = () => {
   return (
       <>
         {/* Se eliminó justify-center para que vuelva a la izquierda */}
-        <section id="inicio" className="relative w-full min-h-[650px] bg-gray-300 flex items-center pt-32 pb-16 overflow-hidden">
+        <section 
+            id="inicio" 
+              className="relative w-full min-h-[800px] lg:min-h-[90vh] bg-gray-900 bg-no-repeat bg-cover bg-[center_top] md:bg-[60%_20%] lg:bg-[80%_-15%] flex items-center pt-40 md:pt-48 pb-20 overflow-hidden"
+            style={{ backgroundImage: `url(${heroImage})` }}
+        >
 
-          {/* CAPA BASE: IMAGEN 1 (Alineada a la derecha) */}
-          <div className="absolute inset-0 flex items-center justify-end pr-10 md:pr-32 z-0">
-          <span className="text-gray-500 font-bold text-3xl md:text-5xl opacity-40 tracking-widest uppercase text-right">
-            IMAGEN 1 <br/> (Fondo Hero)
-          </span>
-          </div>
-
-          {/* CAPA MEDIA: DEGRADADO (Rosa a la izquierda, transparente a la derecha) */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#ED6A8E] via-[#ED6A8E]/95 to-transparent z-10"></div>
+          {/* CAPA MEDIA: DEGRADADO INTELIGENTE (Rosa sólido a la izquierda, transparente a la derecha) */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#ED6A8E] from-10% via-[#ED6A8E]/90 via-45% to-transparent to-70% z-10"></div>
 
           {/* CAPA SUPERIOR: CONTENIDO ALINEADO A LA IZQUIERDA */}
           <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-8">

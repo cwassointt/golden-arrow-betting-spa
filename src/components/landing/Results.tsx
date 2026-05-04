@@ -1,5 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
+import resultsImage from "@/images/resultsninho.webp";
 
 type Pick = { match: string; odds: string; units: string };
 
@@ -11,16 +12,13 @@ const picks: Pick[] = [
 
 export const Results = () => {
   return (
-      <section id="resultados" className="relative w-full py-16 md:py-24 bg-gray-300 flex items-center overflow-hidden">
-        {/* CAPA BASE: IMAGEN 2 COMO FONDO COMPLETO */}
-        <div className="absolute inset-0 flex items-center justify-end pr-10 md:pr-32 z-0">
-        <span className="text-gray-500 font-bold text-2xl md:text-4xl opacity-50 tracking-widest uppercase">
-          IMAGEN 2 (Fondo Resultados)
-        </span>
-        </div>
-
-        {/* CAPA MEDIA: DEGRADADO IGUAL AL HERO */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#ED6A8E] via-[#ED6A8E]/95 to-transparent z-10"></div>
+      <section 
+        id="resultados" 
+        className="relative w-full py-16 md:py-24 bg-gray-900 bg-no-repeat bg-cover bg-[center_right] flex items-center overflow-hidden"
+        style={{ backgroundImage: `url(${resultsImage})` }}
+      >
+        {/* CAPA MEDIA: DEGRADADO INTELIGENTE (Permite ver la imagen a la derecha) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#ED6A8E] from-20% via-[#ED6A8E]/90 via-50% to-transparent to-90% z-10"></div>
 
         {/* CAPA SUPERIOR: CONTENIDO (Tarjetas a la izquierda) */}
         <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-8">
