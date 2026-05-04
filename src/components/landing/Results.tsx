@@ -17,10 +17,8 @@ export const Results = () => {
         className="relative w-full py-16 md:py-24 bg-gray-900 bg-no-repeat bg-cover bg-[center_right] flex items-center overflow-hidden"
         style={{ backgroundImage: `url(${resultsImage})` }}
       >
-        {/* CAPA MEDIA: DEGRADADO INTELIGENTE (Permite ver la imagen a la derecha) */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#ED6A8E] from-20% via-[#ED6A8E]/90 via-50% to-transparent to-90% z-10"></div>
 
-        {/* CAPA SUPERIOR: CONTENIDO (Tarjetas a la izquierda) */}
         <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-xl">
             <motion.h2 

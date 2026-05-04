@@ -28,7 +28,7 @@ export const Navbar = () => {
 	useEffect(() => {
 		const options = {
 			root: null,
-			rootMargin: "-120px 0px 0px 0px", // Ajuste para que active el menú considerando la altura del Navbar
+			rootMargin: "-120px 0px 0px 0px",
 			threshold: 0.1,
 		};
 
@@ -50,14 +50,11 @@ export const Navbar = () => {
 	}, []);
 
 	const handleScroll = () => {
-		// Eliminamos preventDefault y scrollIntoView.
-		// Dejamos que el navegador maneje el smooth scroll nativo gracias al index.html
-		setOpen(false); // Solo cerramos el menú en caso de estar en móvil
+		setOpen(false);
 	};
 
 	return (
 		<>
-			{/* Forzamos por CSS nativo el smooth scroll y el offset por si falla la clase de Tailwind */}
 			<style>{`
 				html {
 					scroll-behavior: smooth !important;
@@ -75,7 +72,6 @@ export const Navbar = () => {
 						: "bg-white/90 backdrop-blur mt-4 py-3"
 				}`}
 			>
-				{/* Logo */}
 				<a href="#inicio" onClick={handleScroll} className="flex items-center gap-2 transition-transform hover:scale-105">
 					<CrownSolidIcon className="h-7 w-7 text-[#D4AF37]" />
 					<span className="font-display font-black text-xl text-[#000000] tracking-tight">
@@ -83,7 +79,6 @@ export const Navbar = () => {
 					</span>
 				</a>
 
-				{/* Desktop links */}
 				<ul className="hidden lg:flex items-center gap-8">
 					{links.map((l) => (
 						<li key={l.label}>

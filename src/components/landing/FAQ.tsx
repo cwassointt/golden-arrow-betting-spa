@@ -22,27 +22,23 @@ export const FAQ = () => {
         <section id="faq" className="py-20 md:py-28 bg-white">
             <div className="container mx-auto px-4 md:px-6 max-w-3xl">
 
-                {/* Título estilo PrizePicks: Grueso, oscuro y centrado/alineado */}
                 <div className="mb-12 text-center md:text-left">
                     <h2 className="font-display font-black text-4xl md:text-5xl text-gray-900 tracking-tight">
                         Preguntas Frecuentes
                     </h2>
                 </div>
 
-                {/* Contenedor de las preguntas con línea superior */}
                 <div className="border-t border-gray-200">
                     {faqs.map((faq, index) => (
                         <details
                             key={index}
                             className="group border-b border-gray-200 [&_summary::-webkit-details-marker]:hidden"
                         >
-                            {/* Pregunta */}
                             <summary className="flex cursor-pointer items-center justify-between py-6 text-gray-900 outline-none hover:text-[#ED6A8E] transition-colors">
                                 <h3 className="font-display font-bold text-lg md:text-xl pr-4 leading-snug">
                                     {faq.q}
                                 </h3>
 
-                                {/* Ícono de Chevron minimalista que rota al abrir */}
                                 <span className="relative size-5 shrink-0 transition-transform duration-300 group-open:rotate-180">
                   <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +53,6 @@ export const FAQ = () => {
                 </span>
                             </summary>
 
-                            {/* Respuesta */}
                             <div className="pb-6 text-gray-600 leading-relaxed text-sm md:text-base pr-8">
                                 <p>{faq.a}</p>
                             </div>

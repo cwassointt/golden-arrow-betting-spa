@@ -8,7 +8,6 @@ export const Footer = () => {
     <footer className="bg-gray-950 pt-16 pb-8 border-t border-gray-900 relative z-0">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand */}
           <div>
             <div className="flex items-center gap-2">
               <CrownSolidIcon className="h-7 w-7 text-[#D4AF37]" />
@@ -19,7 +18,6 @@ export const Footer = () => {
             </p>
           </div>
 
-          {/* Quick links */}
           <div>
             <h4 className="font-display font-bold text-sm text-white tracking-widest uppercase">ACCESOS RÁPIDOS</h4>
             <ul className="mt-4 space-y-2.5">
@@ -36,7 +34,6 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Connect */}
           <div>
             <h4 className="font-display font-bold text-sm text-white tracking-widest uppercase">CONECTA CONMIGO</h4>
             <ul className="mt-4 space-y-3">
@@ -55,7 +52,6 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* CTA del Footer */}
           <div className="flex md:justify-end">
             <a 
               href="https://t.me/" 

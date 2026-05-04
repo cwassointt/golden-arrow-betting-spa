@@ -19,21 +19,18 @@ export const TopBanner = () => {
                 }
                 .animate-marquee {
                     display: flex;
-                    /* Aumentamos el tiempo a 120s para que vaya mucho más lento */
                     animation: marquee-scroll 120s linear infinite;
                 }
             `}</style>
 
             <div className="flex w-full">
 
-                {/* BLOQUE 1 */}
                 <div className="animate-marquee shrink-0 flex items-center text-white text-sm font-medium">
                     <Phrase />
                     <Phrase />
                     <Phrase />
                 </div>
 
-                {/* BLOQUE 2 */}
                 <div className="animate-marquee shrink-0 flex items-center text-white text-sm font-medium" aria-hidden="true">
                     <Phrase />
                     <Phrase />
