@@ -3,6 +3,7 @@ import { CrownSolidIcon } from "@/components/icons/CrownIcon";
 import { TelegramIcon } from "@/components/icons/TelegramIcon";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
 	{ label: "Inicio", href: "#inicio", active: true },
@@ -64,11 +65,16 @@ export const Navbar = () => {
 				}
 			`}</style>
 			
-			<header className={`fixed top-[40px] left-0 right-0 mx-auto z-[60] max-w-5xl rounded-full shadow-xl flex justify-between items-center px-6 transition-all duration-500 ease-in-out ${
-				isScrolled 
-					? "bg-white/95 backdrop-blur-md mt-2 py-2" 
-					: "bg-white/90 backdrop-blur mt-4 py-3"
-			}`}>
+			<motion.header 
+				initial={{ y: -100, opacity: 0 }} 
+				animate={{ y: 0, opacity: 1 }} 
+				transition={{ duration: 0.6, ease: "easeOut" }}
+				className={`fixed top-[40px] left-0 right-0 mx-auto z-[60] max-w-5xl rounded-full shadow-xl flex justify-between items-center px-6 transition-colors duration-500 ease-in-out ${
+					isScrolled 
+						? "bg-white/95 backdrop-blur-md mt-2 py-2" 
+						: "bg-white/90 backdrop-blur mt-4 py-3"
+				}`}
+			>
 				{/* Logo */}
 				<a href="#inicio" onClick={handleScroll} className="flex items-center gap-2 transition-transform hover:scale-105">
 					<CrownSolidIcon className="h-7 w-7 text-[#D4AF37]" />
@@ -98,7 +104,7 @@ export const Navbar = () => {
 
 				<div className="hidden md:block">
 					<Button
-						className="rounded-full bg-[#ED6A8E] hover:bg-[#d8567a] text-white font-bold"
+						className="rounded-full bg-black hover:bg-gray-800 text-white font-bold px-6 border-2 border-transparent transition-colors"
 						asChild
 					>
 						<a
@@ -120,35 +126,43 @@ export const Navbar = () => {
 					{open ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
 				</button>
 
-				{open && (
-					<div className="lg:hidden absolute top-[100%] left-0 w-full mt-2 rounded-2xl shadow-xl border border-border bg-white p-6 space-y-5 transition-all duration-300">
-						{links.map((l) => (
-							<a
-								key={l.label}
-								href={l.href}
-								onClick={handleScroll}
-								className={`block text-sm font-bold tracking-widest transition-colors duration-300 ${
-									activeSection === l.href.replace("#", "")
-										? "text-[#ED6A8E]"
-										: "text-foreground hover:text-primary"
-								}`}
-							>
-								{l.label}
-							</a>
-						))}
-						<Button variant="cta" size="pill" className="w-full" asChild>
-							<a
-								href="https://t.me/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<TelegramIcon className="!size-5" />
-								UNIRME AL TELEGRAM
-							</a>
-						</Button>
-					</div>
-				)}
-			</header>
+				<AnimatePresence>
+					{open && (
+						<motion.div 
+							initial={{ opacity: 0, y: -20, scale: 0.95 }}
+							animate={{ opacity: 1, y: 0, scale: 1 }}
+							exit={{ opacity: 0, y: -20, scale: 0.95 }}
+							transition={{ duration: 0.2, ease: "easeInOut" }}
+							className="lg:hidden absolute top-[100%] left-0 w-full mt-2 rounded-2xl shadow-xl border border-border bg-white p-6 space-y-5"
+						>
+							{links.map((l) => (
+								<a
+									key={l.label}
+									href={l.href}
+									onClick={handleScroll}
+									className={`block text-sm font-bold tracking-widest transition-colors duration-300 ${
+										activeSection === l.href.replace("#", "")
+											? "text-[#ED6A8E]"
+											: "text-foreground hover:text-primary"
+									}`}
+								>
+									{l.label}
+								</a>
+							))}
+							<Button variant="cta" size="pill" className="w-full bg-black hover:bg-gray-800 text-white font-bold" asChild>
+								<a
+									href="https://t.me/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<TelegramIcon className="!size-5" />
+									UNIRME AL TELEGRAM
+								</a>
+							</Button>
+						</motion.div>
+					)}
+				</AnimatePresence>
+			</motion.header>
 		</>
 	);
 };

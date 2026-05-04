@@ -1,24 +1,20 @@
 export const FAQ = () => {
     const faqs = [
         {
-            q: "¿Es el canal de Telegram realmente gratis?",
-            a: "Sí, 100% gratis. No cobramos mensualidades ni hay suscripciones VIP de pago. Mi objetivo es crecer la comunidad y que todos ganemos juntos."
+            q: "¿Es realmente gratis o hay algún truco?",
+            a: "Es 100% gratis. No cobramos mensualidades ni suscripciones ocultas. Entras, copias mis resultados y ganas dinero. Así de sencillo."
         },
         {
-            q: "¿Necesito experiencia previa para seguir los picks?",
-            a: "No, en el canal explico paso a paso cómo leer las cuotas y dónde colocar los pronósticos. Es ideal tanto para principiantes que buscan aprender, como para veteranos."
+            q: "¿Necesito saber de deportes para ganar dinero?",
+            a: "Para nada. Tú no necesitas analizar absolutamente nada, de eso me encargo yo. Solo tienes que copiar mis indicaciones exactas y cobrar tus ganancias."
         },
         {
-            q: "¿Con qué bank (capital) mínimo debo empezar?",
-            a: "No hay un mínimo estricto. Lo más importante es la gestión de capital (Stake) que te enseñaré en el canal. Puedes empezar con el monto que te sientas cómodo invirtiendo."
+            q: "¿Cuánto dinero necesito para empezar a ganar?",
+            a: "Puedes empezar con lo que tengas disponible. Te enseñaré a gestionar cualquier cantidad para que comiences a multiplicar tu dinero desde el día 1, sin presiones."
         },
         {
-            q: "¿En qué casas de apuestas operan?",
-            a: "Los picks están diseñados para encontrarse en las casas de apuestas más populares y accesibles internacionalmente y en Perú, para que no tengas problemas al seguir la jugada."
-        },
-        {
-            q: "¿Cuántos pronósticos envías al día?",
-            a: "Priorizo estrictamente la calidad sobre la cantidad. Dependiendo de las oportunidades de valor en el mercado, envío entre 1 a 3 picks diarios respaldados por un análisis profundo."
+            q: "¿Cómo empiezo a copiar tus resultados?",
+            a: "Cero complicaciones. Solo tienes que unirte al canal de Telegram haciendo clic en cualquiera de los botones de esta página. El acceso es inmediato y gratuito."
         }
     ];
 

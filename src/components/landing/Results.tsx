@@ -1,4 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 type Pick = { match: string; odds: string; units: string };
 
@@ -24,14 +25,24 @@ export const Results = () => {
         {/* CAPA SUPERIOR: CONTENIDO (Tarjetas a la izquierda) */}
         <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-xl">
-            <h2 className="font-display font-black text-4xl md:text-5xl text-white uppercase drop-shadow-md mb-8">
-              RESULTADOS RECIENTES
-            </h2>
+            <motion.h2 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="font-display font-black text-4xl md:text-5xl text-white uppercase drop-shadow-md mb-8 leading-tight"
+            >
+              MIRA LO FÁCIL QUE ES GANAR CON NOSOTROS
+            </motion.h2>
 
             <div className="flex flex-col gap-5">
-              {picks.map((p) => (
-                  <article
+              {picks.map((p, index) => (
+                  <motion.article
                       key={p.match}
+                      initial={{ opacity: 0, x: -30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true, margin: "-50px" }}
+                      transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.15 }}
                       className="bg-white/95 backdrop-blur rounded-xl p-5 shadow-xl border-l-8 border-[#34D399] hover:shadow-2xl transition-all hover:-translate-y-1"
                   >
                     <div className="flex items-center justify-between flex-wrap gap-3 mb-2">
@@ -54,7 +65,7 @@ export const Results = () => {
                     </span>
                       </div>
                     </div>
-                  </article>
+                  </motion.article>
               ))}
             </div>
           </div>
