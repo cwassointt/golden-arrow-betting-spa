@@ -1,5 +1,6 @@
 import { CrownSolidIcon } from "@/components/icons/CrownIcon";
 import { TelegramIcon, InstagramIcon } from "@/components/icons/TelegramIcon";
+import { Youtube, Music2, Gamepad2 } from "lucide-react";
 
 const quickLinks = ["Inicio", "Resultados", "Sobre mí", "FAQ"];
 
@@ -44,9 +45,27 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-[#ED6A8E] transition-colors font-medium">
+                <a href="https://www.instagram.com/ninhoviejo/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-[#ED6A8E] transition-colors font-medium">
                   <InstagramIcon className="h-5 w-5" />
                   Instagram
+                </a>
+              </li>
+              <li>
+                <a href="https://www.tiktok.com/@ninhoviejo3.0" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-[#ED6A8E] transition-colors font-medium">
+                  <Music2 className="h-5 w-5" />
+                  TikTok
+                </a>
+              </li>
+              <li>
+                <a href="https://kick.com/ninhoviejo" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-[#ED6A8E] transition-colors font-medium">
+                  <Gamepad2 className="h-5 w-5" />
+                  Kick
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@ninhoviejo73/videos" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-[#ED6A8E] transition-colors font-medium">
+                  <Youtube className="h-5 w-5" />
+                  YouTube
                 </a>
               </li>
             </ul>
