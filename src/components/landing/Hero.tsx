@@ -53,7 +53,7 @@ export const Hero = () => {
 
               <motion.div variants={itemVariants}>
                 <a
-                    href="https://t.me/"
+                    href="https://bit.ly/ninhoweb"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-auto inline-flex items-center px-10 py-4 rounded-full bg-gray-900 hover:bg-black text-white font-extrabold tracking-wide shadow-xl transition-transform hover:scale-105 mb-3 gap-2"

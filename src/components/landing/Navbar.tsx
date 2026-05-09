@@ -103,7 +103,7 @@ export const Navbar = () => {
 						asChild
 					>
 						<a
-							href="https://t.me/"
+							href="https://bit.ly/ninhoweb"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
@@ -146,7 +146,7 @@ export const Navbar = () => {
 							))}
 							<Button variant="cta" size="pill" className="w-full bg-black hover:bg-gray-800 text-white font-bold" asChild>
 								<a
-									href="https://t.me/"
+									href="https://bit.ly/ninhoweb"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
