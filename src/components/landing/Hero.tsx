@@ -23,7 +23,7 @@ export const Hero = () => {
       <>
         <section 
             id="inicio" 
-            className="relative w-full min-h-[800px] lg:min-h-[90vh] bg-gray-900 bg-no-repeat bg-cover bg-[center_top] md:bg-[60%_20%] lg:bg-[80%_-15%] flex items-center pt-40 md:pt-48 pb-20 overflow-hidden"
+            className="relative w-full min-h-[800px] lg:min-h-[90vh] bg-gray-900 bg-no-repeat bg-cover bg-[center_top] md:bg-[60%_20%] lg:bg-[80%_55%] flex items-center pt-40 md:pt-48 pb-20 overflow-hidden"
             style={{ backgroundImage: `url(${heroImage})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-[#ED6A8E] from-10% via-[#ED6A8E]/90 via-45% to-transparent to-70% z-10"></div>
