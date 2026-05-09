@@ -4,31 +4,31 @@ import featuresImage from "@/images/featuresninho.webp";
 
 const leftFeatures = [
 	{
-		icon: Target,
-		title: "Enfoque en Mercados Específicos",
+		icon: Zap,
+		title: "Dinero Rápido y Real",
 		description:
-			"No apostamos a ciegas. Nos especializamos en mercados líquidos donde la información es clave para detectar valor.",
+			"Diseñado para que veas resultados desde el primer día. Sin esperas largas, solo oportunidades directas para facturar a diario.",
 	},
 	{
-		icon: Zap,
-		title: "Estrategias de Reacción Rápida",
+		icon: Target,
+		title: "Acceso 100% Gratuito",
 		description:
-			"Aprovechamos las fluctuaciones en vivo para ejecutar picks con ventaja competitiva antes de que las cuotas se ajusten.",
+			"Olvida las suscripciones VIP o trucos ocultos. Aquí entras gratis, copias mis jugadas gratis y te quedas con el 100% de tus ganancias.",
 	},
 ];
 
 const rightFeatures = [
 	{
 		icon: Clock3,
-		title: "Gestión de Bankroll Profesional",
+		title: "Comunidad VIP Privada",
 		description:
-			"Cada pick es parte de un plan a largo plazo. Protegemos tu capital con una estrategia de stake disciplinada.",
+			"Únete a miles de personas que ya están ganando. Una comunidad activa donde el conocimiento se traduce en beneficios inmediatos.",
 	},
 	{
 		icon: Smile,
-		title: "Transparencia Total",
+		title: "Cero Riesgo de Cuotas",
 		description:
-			"Todos los resultados, ganados y perdidos, son auditados y publicados diariamente en el canal.",
+			"Te doy las indicaciones exactas para que no pierdas tiempo. Tú solo copias lo que yo hago y dejas que los resultados hablen por sí solos.",
 	},
 ];
 
@@ -54,7 +54,7 @@ export const Features = () => {
 			<div className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#FEF2F4]/80 to-transparent z-[5]"></div>
 
 			<div className="relative z-10 container mx-auto px-4 md:px-6 h-full flex flex-col">
-				{/* Título arriba a la izquierda - COLORES Y DISEÑO ORIGINAL RESTAURADO */}
+				{/* Título arriba a la izquierda - Estilo original restaurado */}
 				<div className="max-w-2xl mb-12 text-left">
 					<motion.h2
 						initial={{ opacity: 0, x: -30 }}
@@ -77,7 +77,7 @@ export const Features = () => {
 					</motion.p>
 				</div>
 
-				{/* Grid de 3 columnas - Cards originales en los extremos */}
+				{/* Grid de 3 columnas - Cards con textos optimizados */}
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mt-auto">
 					{/* Lado Izquierdo */}
 					<div className="flex flex-col gap-6">
