@@ -1,6 +1,7 @@
 import { TelegramIcon } from "@/components/icons/TelegramIcon";
 import { motion, Variants } from "framer-motion";
 import heroImage from "@/images/ninhoviejo.webp";
+import { ArrowRight } from "lucide-react";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -21,53 +22,79 @@ const itemVariants: Variants = {
 export const Hero = () => {
   return (
       <>
-        <section 
-            id="inicio" 
-            className="relative w-full min-h-[800px] lg:min-h-[90vh] bg-gray-900 bg-no-repeat bg-cover bg-[center_top] md:bg-[60%_20%] lg:bg-[80%_55%] flex items-center pt-40 md:pt-48 pb-20 overflow-hidden"
+        <section
+            id="inicio"
+            className="relative w-full min-h-[850px] lg:min-h-[95vh] bg-gray-900 bg-no-repeat bg-cover bg-[center_top] md:bg-[60%_20%] lg:bg-[80%_55%] flex items-center pt-32 md:pt-48 pb-20 overflow-hidden"
             style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-[#ED6A8E] from-10% via-[#ED6A8E]/90 via-45% to-transparent to-70% z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#ED6A8E] from-10% via-[#ED6A8E]/90 via-45% to-transparent to-90% z-10"></div>
 
-          <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-8">
-            <motion.div 
-                className="max-w-3xl flex flex-col items-start text-left"
+          <div className="container mx-auto px-6 relative z-20">
+            <motion.div
                 variants={containerVariants}
                 initial="hidden"
                 animate="show"
+                className="max-w-4xl"
             >
-              <motion.p variants={itemVariants} className="text-sm font-bold tracking-widest text-white/90 uppercase mb-4 drop-shadow-sm">
-                NINHOVIEJO
-              </motion.p>
-
-              <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-[0.9] italic mb-8 uppercase drop-shadow-2xl">
-                <span className="text-white block">GANA DINERO RÁPIDO, FÁCIL</span>
-                <span className="text-gray-900 block">Y TOTALMENTE GRATIS</span>
+              {/* TÍTULO ACTUALIZADO: RÁPIDO, FÁCIL AHORA EN BLANCO */}
+              <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter italic uppercase mb-6">
+                <span className="block">GANA DINERO</span>
+                <span className="block font-black">RÁPIDO, FÁCIL</span>
+                <span className="text-gray-900 block font-black">Y TOTALMENTE GRATIS</span>
               </motion.h1>
 
-              <motion.h2 variants={itemVariants} className="text-2xl md:text-3xl text-white font-extrabold mb-3">
+              {/* Jerarquía en móvil */}
+              <motion.h2 variants={itemVariants} className="text-lg md:text-3xl text-white font-extrabold mb-2 opacity-90">
                 Descubre el método exacto para facturar a diario.
               </motion.h2>
-              <motion.p variants={itemVariants} className="text-white/90 text-lg max-w-xl mb-8 font-medium">
+              <motion.p variants={itemVariants} className="text-sm md:text-xl text-white/80 max-w-xl mb-12 font-medium leading-tight md:leading-normal">
                 Únete a mi comunidad privada y empieza a ganar dinero hoy mismo <strong className="text-gray-900 font-black">sin pagar un solo centavo.</strong>
               </motion.p>
 
-              <motion.div variants={itemVariants}>
-                <a
+              {/* Botón Dorado Macizo */}
+              <motion.div variants={itemVariants} className="flex flex-col items-start gap-6">
+                <motion.a
                     href="https://bit.ly/ninhoweb"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-auto inline-flex items-center px-10 py-4 rounded-full bg-gray-900 hover:bg-black text-white font-extrabold tracking-wide shadow-xl transition-transform hover:scale-105 mb-3 gap-2"
+                    animate={{ scale: [1, 1.03, 1] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    className="group relative inline-flex flex-col md:flex-row items-center justify-center bg-[#D4AF37] hover:bg-[#b8952e] text-black px-10 py-8 md:px-16 md:py-10 rounded-2xl shadow-[0_0_50px_rgba(212,175,55,0.4)] transition-all active:scale-95 gap-4 overflow-hidden border-b-8 border-[#9a7d21]"
                 >
-                  <TelegramIcon className="!size-6 shrink-0" />
-                  UNIRME AL CANAL VIP AHORA
-                </a>
-                <span className="text-xs text-white/80 block font-medium">
-                  🔒 Acceso inmediato y 100% seguro. Cancela cuando quieras.
-                </span>
-              </motion.div>
+                  <motion.div
+                      animate={{ x: ['-100%', '200%'] }}
+                      transition={{ duration: 3, repeat: Infinity, ease: "linear", repeatDelay: 1 }}
+                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12 z-0"
+                  />
 
+                  <div className="relative z-10 flex items-center gap-4">
+                    <TelegramIcon className="!size-10 md:!size-14 shrink-0 drop-shadow-md" />
+                    <div className="flex flex-col items-start">
+                        <span className="text-2xl md:text-4xl font-black uppercase tracking-tighter leading-none">
+                            UNIRME AL CANAL
+                        </span>
+                      <span className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-none">
+                            GRATUITO AHORA
+                        </span>
+                    </div>
+                    <ArrowRight className="hidden md:block size-10 group-hover:translate-x-2 transition-transform duration-300" />
+                  </div>
+                </motion.a>
+
+                <div className="flex items-center gap-2 pl-2">
+                    <span className="relative flex h-3 w-3">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                  <span className="text-sm md:text-base text-white font-bold uppercase tracking-widest drop-shadow-sm">
+                        Últimos cupos disponibles hoy
+                    </span>
+                </div>
+              </motion.div>
             </motion.div>
           </div>
+
+          <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-900 to-transparent z-10"></div>
         </section>
       </>
   );
