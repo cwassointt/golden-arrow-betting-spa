@@ -29,7 +29,7 @@ export const SocialProof = () => {
 
           <div className="mt-12">
             <a
-                href="https://bit.ly/ninhoweb"
+                href="https://t.me/ninhoviejomundial"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-gray-950 rounded-full text-lg font-black hover:bg-[#D4AF37] hover:text-white transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(212,175,55,0.3)] uppercase tracking-wide"

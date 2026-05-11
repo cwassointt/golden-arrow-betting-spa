@@ -54,7 +54,7 @@ export const Hero = () => {
               {/* Botón Dorado Macizo */}
               <motion.div variants={itemVariants} className="flex flex-col items-start gap-6">
                 <motion.a
-                    href="https://bit.ly/ninhoweb"
+                    href="https://t.me/ninhoviejomundial"
                     target="_blank"
                     rel="noopener noreferrer"
                     animate={{ scale: [1, 1.03, 1] }}

@@ -39,7 +39,7 @@ export const Footer = () => {
             <h4 className="font-display font-bold text-sm text-white tracking-widest uppercase">CONECTA CONMIGO</h4>
             <ul className="mt-4 space-y-3">
               <li>
-                <a href="https://bit.ly/ninhoweb" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-[#ED6A8E] transition-colors font-medium">
+                <a href="https://t.me/ninhoviejomundial" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-[#ED6A8E] transition-colors font-medium">
                   <TelegramIcon className="h-5 w-5" />
                   Telegram
                 </a>
@@ -73,7 +73,7 @@ export const Footer = () => {
 
           <div className="flex md:justify-end">
             <a 
-              href="https://bit.ly/ninhoweb" 
+              href="https://t.me/ninhoviejomundial" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-[#ED6A8E] text-[#ED6A8E] rounded-full text-sm font-bold hover:bg-[#ED6A8E] hover:text-white transition-colors w-full md:w-auto h-fit"

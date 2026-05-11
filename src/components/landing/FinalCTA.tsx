@@ -20,7 +20,7 @@ export const FinalCTA = () => {
 
           <div className="mt-12">
             <a
-                href="https://bit.ly/ninhoweb"
+                href="https://t.me/ninhoviejomundial"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-white text-[#ED6A8E] px-12 py-6 rounded-full text-xl md:text-2xl font-black hover:bg-gray-50 shadow-[0_15px_40px_rgba(0,0,0,0.2)] transition-all hover:scale-105 hover:-translate-y-1 w-full md:w-auto uppercase tracking-wider animate-pulse hover:animate-none"
