@@ -10,7 +10,7 @@ export const SocialProof = () => {
 
           <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-gray-300 text-sm font-bold tracking-widest uppercase mb-8 backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-            GANA DINERO SIN PAGAR SUSCRIPCIONES
+            OPERACIONES EN VIVO SIN SUSCRIPCIONES
           </div>
 
           <h2 className="font-display font-black tracking-tighter text-5xl md:text-7xl lg:text-[5.5rem] leading-[0.9] text-white italic drop-shadow-2xl">
@@ -18,13 +18,13 @@ export const SocialProof = () => {
             MÁS DE <span className="text-[#D4AF37] underline decoration-[#ED6A8E] decoration-4 underline-offset-8">100,000</span> MIEMBROS,
           </span>
             <span className="block text-[#ED6A8E]">
-            CERO PAGOS MENSUALES.
+            SIN CUOTAS DE ENTRADA.
           </span>
           </h2>
 
           <p className="mt-10 text-xl md:text-2xl text-gray-400 font-medium max-w-2xl leading-relaxed">
-            Únete a más de 100,000 personas que ya están multiplicando sus ingresos. Yo te digo exactamente qué hacer para ganar, tú solo copias, pegas y cobras.
-            <strong className="text-white ml-2">Cero pagos mensuales, 100% gratis.</strong>
+            Únete a más de 100,000 personas que ya están transformando sus resultados. Yo te doy la hoja de ruta, tú solo sigues el plan.{" "}
+            <strong className="text-white ml-2">Cero mensualidades, acceso libre.</strong>
           </p>
 
           <div className="mt-12">

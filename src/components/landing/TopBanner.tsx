@@ -1,11 +1,11 @@
 export const TopBanner = () => {
     const Phrase = () => (
         <>
-            <span>Únete al canal VIP: <span className="font-black">Totalmente Gratis</span></span>
+            <span>Únete al grupo: <span className="font-black">Acceso Libre</span></span>
             <span className="mx-4">•</span>
-            <span>Comunidad de apuestas: <span className="font-black">Cero Pagos</span></span>
+            <span>Análisis deportivo: <span className="font-black">Sin Cuotas</span></span>
             <span className="mx-4">•</span>
-            <span>Acceso inmediato: <span className="font-black">Sin Compromisos</span></span>
+            <span>Inicia ahora: <span className="font-black">Sin Registro</span></span>
             <span className="mx-4">•</span>
         </>
     );

@@ -38,17 +38,17 @@ export const Hero = () => {
             >
               {/* TÍTULO ACTUALIZADO: RÁPIDO, FÁCIL AHORA EN BLANCO */}
               <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter italic uppercase mb-6">
-                <span className="block">GANA DINERO</span>
-                <span className="block font-black">RÁPIDO, FÁCIL</span>
-                <span className="text-gray-900 block font-black">Y TOTALMENTE GRATIS</span>
+                <span className="block">TRABAJA CONMIGO</span>
+                <span className="block font-black">ESTE MUNDIAL</span>
+                <span className="text-gray-900 block font-black">ACCESO LIBRE HOY</span>
               </motion.h1>
 
               {/* Jerarquía en móvil */}
               <motion.h2 variants={itemVariants} className="text-lg md:text-3xl text-white font-extrabold mb-2 opacity-90">
-                Descubre el método exacto para facturar a diario.
+                Domina el análisis deportivo con mi metodología probada.
               </motion.h2>
               <motion.p variants={itemVariants} className="text-sm md:text-xl text-white/80 max-w-xl mb-12 font-medium leading-tight md:leading-normal">
-                Únete a mi comunidad privada y empieza a ganar dinero hoy mismo <strong className="text-gray-900 font-black">sin pagar un solo centavo.</strong>
+                Únete a mi comunidad estratégica y empieza a ver resultados hoy mismo <strong className="text-gray-900 font-black">sin costos de inscripción.</strong>
               </motion.p>
 
               {/* Botón Dorado Macizo */}

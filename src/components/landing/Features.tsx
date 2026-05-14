@@ -5,30 +5,30 @@ import featuresImage from "@/images/featuresninho.webp";
 const leftFeatures = [
 	{
 		icon: Zap,
-		title: "Dinero Rápido y Real",
+		title: "Resultados Diarios Reales",
 		description:
-			"Diseñado para que veas resultados desde el primer día. Sin esperas largas, solo oportunidades directas para facturar a diario.",
+			"Diseñado para que veas efectividad desde el primer día. Sin esperas largas, solo análisis directos para tu crecimiento.",
 	},
 	{
 		icon: Target,
-		title: "Acceso 100% Gratuito",
+		title: "Comunidad de Acceso Libre",
 		description:
-			"Olvida las suscripciones VIP o trucos ocultos. Aquí entras gratis, copias mis jugadas gratis y te quedas con el 100% de tus ganancias.",
+			"Olvida las suscripciones o barreras de entrada. Aquí entras sin cuotas, sigues mi metodología y aprovechas el 100% de los resultados.",
 	},
 ];
 
 const rightFeatures = [
 	{
 		icon: Clock3,
-		title: "Comunidad VIP Privada",
+		title: "Grupo de Análisis Estratégico",
 		description:
-			"Únete a miles de personas que ya están ganando. Una comunidad activa donde el conocimiento se traduce en beneficios inmediatos.",
+			"Únete a miles de personas que ya están operando con éxito. Una comunidad activa donde el análisis se traduce en beneficios.",
 	},
 	{
 		icon: Smile,
-		title: "Cero Riesgo de Cuotas",
+		title: "Metodología Simplificada",
 		description:
-			"Te doy las indicaciones exactas para que no pierdas tiempo. Tú solo copias lo que yo hago y dejas que los resultados hablen por sí solos.",
+			"Te doy las indicaciones exactas para que no pierdas tiempo. Tú solo replicas mi análisis y dejas que la estrategia hable por sí sola.",
 	},
 ];
 
