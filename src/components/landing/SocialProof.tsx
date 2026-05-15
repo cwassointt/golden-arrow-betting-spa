@@ -1,12 +1,13 @@
 import { TelegramIcon } from "@/components/icons/TelegramIcon";
 
+const TELEGRAM_DOMAIN = "ninhoviejomundial";
+
 export const SocialProof = () => {
   const handleTelegramClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
 
-    const telegramDomain = "ninhoviejomundial";
-    const appLink = `tg://resolve?domain=${telegramDomain}`;
-    const webLink = `https://t.me/${telegramDomain}`;
+    const appLink = `tg://resolve?domain=${TELEGRAM_DOMAIN}`;
+    const webLink = `https://t.me/${TELEGRAM_DOMAIN}`;
 
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
@@ -48,7 +49,7 @@ export const SocialProof = () => {
 
           <div className="mt-12">
             <a
-                href="tg://resolve?domain=ninhoviejomundial"
+                href={`tg://resolve?domain=${TELEGRAM_DOMAIN}`}
                 onClick={handleTelegramClick}
                 className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-gray-950 rounded-full text-lg font-black hover:bg-[#D4AF37] hover:text-white transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(212,175,55,0.3)] uppercase tracking-wide"
             >

@@ -1,13 +1,14 @@
 import { CrownIcon, TrophyOutlineIcon } from "@/components/icons/CrownIcon";
 import { TelegramIcon } from "@/components/icons/TelegramIcon";
 
+const TELEGRAM_DOMAIN = "ninhoviejomundial";
+
 export const FinalCTA = () => {
   const handleTelegramClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
 
-    const telegramDomain = "ninhoviejomundial";
-    const appLink = `tg://resolve?domain=${telegramDomain}`;
-    const webLink = `https://t.me/${telegramDomain}`;
+    const appLink = `tg://resolve?domain=${TELEGRAM_DOMAIN}`;
+    const webLink = `https://t.me/${TELEGRAM_DOMAIN}`;
 
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
@@ -39,7 +40,7 @@ export const FinalCTA = () => {
 
           <div className="mt-12">
             <a
-                href="tg://resolve?domain=ninhoviejomundial"
+                href={`tg://resolve?domain=${TELEGRAM_DOMAIN}`}
                 onClick={handleTelegramClick}
                 className="inline-flex items-center justify-center bg-white text-[#ED6A8E] px-12 py-6 rounded-full text-xl md:text-2xl font-black hover:bg-gray-50 shadow-[0_15px_40px_rgba(0,0,0,0.2)] transition-all hover:scale-105 hover:-translate-y-1 w-full md:w-auto uppercase tracking-wider animate-pulse hover:animate-none"
             >
