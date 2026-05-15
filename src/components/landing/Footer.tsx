@@ -5,6 +5,25 @@ import { Youtube, Music2, Gamepad2 } from "lucide-react";
 const quickLinks = ["Inicio", "Resultados", "Sobre mí", "FAQ"];
 
 export const Footer = () => {
+  const handleTelegramClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    const telegramDomain = "ninhoviejomundial";
+    const appLink = `tg://resolve?domain=${telegramDomain}`;
+    const webLink = `https://t.me/${telegramDomain}`;
+
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      window.location.href = appLink;
+      setTimeout(() => {
+        window.location.href = webLink;
+      }, 1200);
+    } else {
+      window.location.href = webLink;
+    }
+  };
+
   return (
     <footer className="bg-gray-950 pt-16 pb-8 border-t border-gray-900 relative z-0">
       <div className="container mx-auto px-4 md:px-6">
@@ -39,7 +58,7 @@ export const Footer = () => {
             <h4 className="font-display font-bold text-sm text-white tracking-widest uppercase">CONECTA CONMIGO</h4>
             <ul className="mt-4 space-y-3">
               <li>
-                <a href="https://t.me/ninhoviejomundial" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-[#ED6A8E] transition-colors font-medium">
+                <a href="tg://resolve?domain=ninhoviejomundial" onClick={handleTelegramClick} className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-[#ED6A8E] transition-colors font-medium">
                   <TelegramIcon className="h-5 w-5" />
                   Telegram
                 </a>
@@ -73,9 +92,8 @@ export const Footer = () => {
 
           <div className="flex md:justify-end">
             <a 
-              href="https://t.me/ninhoviejomundial" 
-              target="_blank" 
-              rel="noopener noreferrer"
+              href="tg://resolve?domain=ninhoviejomundial" 
+              onClick={handleTelegramClick}
               className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-[#ED6A8E] text-[#ED6A8E] rounded-full text-sm font-bold hover:bg-[#ED6A8E] hover:text-white transition-colors w-full md:w-auto h-fit"
             >
               <TelegramIcon className="!size-5" />

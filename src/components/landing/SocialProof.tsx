@@ -3,24 +3,20 @@ import { TelegramIcon } from "@/components/icons/TelegramIcon";
 export const SocialProof = () => {
   const handleTelegramClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
+
     const telegramDomain = "ninhoviejomundial";
-
-    // 1. Definimos los enlaces
-    const webLink = `https://t.me/${telegramDomain}`;
     const appLink = `tg://resolve?domain=${telegramDomain}`;
+    const webLink = `https://t.me/${telegramDomain}`;
 
-    // 2. Detectamos si estamos en un navegador de App (como TikTok o Instagram)
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    const isInAppBrowser = /TikTok|Instagram|FBAN|FBAV/i.test(navigator.userAgent);
 
-    if (isMobile && isInAppBrowser) {
-      window.location.replace(appLink);
-
+    if (isMobile) {
+      window.location.href = appLink;
       setTimeout(() => {
         window.location.href = webLink;
-      }, 1500);
+      }, 1200);
     } else {
-      window.open(webLink, "_blank");
+      window.location.href = webLink;
     }
   };
 
@@ -52,10 +48,8 @@ export const SocialProof = () => {
 
           <div className="mt-12">
             <a
-                href="https://t.me/ninhoviejomundial"
+                href="tg://resolve?domain=ninhoviejomundial"
                 onClick={handleTelegramClick}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-gray-950 rounded-full text-lg font-black hover:bg-[#D4AF37] hover:text-white transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(212,175,55,0.3)] uppercase tracking-wide"
             >
               <TelegramIcon className="!size-6" />

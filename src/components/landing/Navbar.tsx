@@ -55,24 +55,20 @@ export const Navbar = () => {
 
 	const handleTelegramClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
 		e.preventDefault();
+
 		const telegramDomain = "ninhoviejomundial";
-
-		// 1. Definimos los enlaces
-		const webLink = `https://t.me/${telegramDomain}`;
 		const appLink = `tg://resolve?domain=${telegramDomain}`;
+		const webLink = `https://t.me/${telegramDomain}`;
 
-		// 2. Detectamos si estamos en un navegador de App (como TikTok o Instagram)
 		const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-		const isInAppBrowser = /TikTok|Instagram|FBAN|FBAV/i.test(navigator.userAgent);
 
-		if (isMobile && isInAppBrowser) {
-			window.location.replace(appLink);
-
+		if (isMobile) {
+			window.location.href = appLink;
 			setTimeout(() => {
 				window.location.href = webLink;
-			}, 1500);
+			}, 1200);
 		} else {
-			window.open(webLink, "_blank");
+			window.location.href = webLink;
 		}
 	};
 
@@ -126,10 +122,8 @@ export const Navbar = () => {
 						asChild
 					>
 						<a
-							href="https://t.me/ninhoviejomundial"
+							href="tg://resolve?domain=ninhoviejomundial"
 							onClick={handleTelegramClick}
-							target="_blank"
-							rel="noopener noreferrer"
 						>
 							<TelegramIcon className="!size-5 mr-2" />
 							Unirme al Telegram
@@ -170,10 +164,8 @@ export const Navbar = () => {
 							))}
 							<Button variant="cta" size="pill" className="w-full bg-black hover:bg-gray-800 text-white font-bold" asChild>
 								<a
-									href="https://t.me/ninhoviejomundial"
+									href="tg://resolve?domain=ninhoviejomundial"
 									onClick={handleTelegramClick}
-									target="_blank"
-									rel="noopener noreferrer"
 								>
 									<TelegramIcon className="!size-5" />
 									UNIRME AL TELEGRAM

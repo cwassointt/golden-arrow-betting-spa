@@ -20,27 +20,22 @@ const itemVariants: Variants = {
 };
 
 export const Hero = () => {
-    // Función para forzar la apertura de la App de Telegram en móviles
     const handleTelegramClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
+
         const telegramDomain = "ninhoviejomundial";
-
-        // 1. Definimos los enlaces
-        const webLink = `https://t.me/${telegramDomain}`;
         const appLink = `tg://resolve?domain=${telegramDomain}`;
+        const webLink = `https://t.me/${telegramDomain}`;
 
-        // 2. Detectamos si estamos en un navegador de App (como TikTok o Instagram)
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        const isInAppBrowser = /TikTok|Instagram|FBAN|FBAV/i.test(navigator.userAgent);
 
-        if (isMobile && isInAppBrowser) {
-            window.location.replace(appLink);
-
+        if (isMobile) {
+            window.location.href = appLink;
             setTimeout(() => {
                 window.location.href = webLink;
-            }, 1500);
+            }, 1200);
         } else {
-            window.open(webLink, "_blank");
+            window.location.href = webLink;
         }
     };
 
@@ -78,7 +73,7 @@ export const Hero = () => {
                         {/* Botón Dorado con Lógica de Salto Directo a App */}
                         <motion.div variants={itemVariants} className="flex flex-col items-start gap-6">
                             <motion.a
-                                href="https://t.me/ninhoviejomundial"
+                                href="tg://resolve?domain=ninhoviejomundial"
                                 onClick={handleTelegramClick}
                                 animate={{ scale: [1, 1.03, 1] }}
                                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -123,4 +118,3 @@ export const Hero = () => {
         </>
     );
 };
-
