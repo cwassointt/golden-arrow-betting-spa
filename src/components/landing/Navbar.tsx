@@ -53,6 +53,19 @@ export const Navbar = () => {
 		setOpen(false);
 	};
 
+	const handleTelegramClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+		e.preventDefault();
+		const telegramDomain = "ninhoviejomundial";
+		const appLink = `tg://resolve?domain=${telegramDomain}`;
+		const webLink = `https://t.me/${telegramDomain}`;
+
+		window.location.href = appLink;
+
+		setTimeout(() => {
+			window.location.href = webLink;
+		}, 500);
+	};
+
 	return (
 		<>
 			<style>{`
@@ -104,6 +117,7 @@ export const Navbar = () => {
 					>
 						<a
 							href="https://t.me/ninhoviejomundial"
+							onClick={handleTelegramClick}
 							target="_blank"
 							rel="noopener noreferrer"
 						>
@@ -147,6 +161,7 @@ export const Navbar = () => {
 							<Button variant="cta" size="pill" className="w-full bg-black hover:bg-gray-800 text-white font-bold" asChild>
 								<a
 									href="https://t.me/ninhoviejomundial"
+									onClick={handleTelegramClick}
 									target="_blank"
 									rel="noopener noreferrer"
 								>
