@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const TELEGRAM_DOMAIN = "ninhoviejomundial";
+const TELEGRAM_LINK = "https://t.me/+lPPu8EXRBjEyOGU5";
 
 const links = [
 	{ label: "Inicio", href: "#inicio", active: true },
@@ -57,20 +57,7 @@ export const Navbar = () => {
 
 	const handleTelegramClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
 		e.preventDefault();
-
-		const appLink = `tg://resolve?domain=${TELEGRAM_DOMAIN}`;
-		const webLink = `https://t.me/${TELEGRAM_DOMAIN}`;
-
-		const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-		if (isMobile) {
-			window.location.href = appLink;
-			setTimeout(() => {
-				window.location.href = webLink;
-			}, 1200);
-		} else {
-			window.location.href = webLink;
-		}
+		window.location.href = TELEGRAM_LINK;
 	};
 
 	return (
@@ -123,7 +110,7 @@ export const Navbar = () => {
 						asChild
 					>
 						<a
-							href={`tg://resolve?domain=${TELEGRAM_DOMAIN}`}
+							href={TELEGRAM_LINK}
 							onClick={handleTelegramClick}
 						>
 							<TelegramIcon className="!size-5 mr-2" />
@@ -165,7 +152,7 @@ export const Navbar = () => {
 							))}
 							<Button variant="cta" size="pill" className="w-full bg-black hover:bg-gray-800 text-white font-bold" asChild>
 								<a
-									href={`tg://resolve?domain=${TELEGRAM_DOMAIN}`}
+									href={TELEGRAM_LINK}
 									onClick={handleTelegramClick}
 								>
 									<TelegramIcon className="!size-5" />

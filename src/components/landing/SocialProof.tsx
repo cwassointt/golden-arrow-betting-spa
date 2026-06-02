@@ -1,24 +1,11 @@
 import { TelegramIcon } from "@/components/icons/TelegramIcon";
 
-const TELEGRAM_DOMAIN = "ninhoviejomundial";
+const TELEGRAM_LINK = "https://t.me/+lPPu8EXRBjEyOGU5";
 
 export const SocialProof = () => {
   const handleTelegramClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-
-    const appLink = `tg://resolve?domain=${TELEGRAM_DOMAIN}`;
-    const webLink = `https://t.me/${TELEGRAM_DOMAIN}`;
-
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-    if (isMobile) {
-      window.location.href = appLink;
-      setTimeout(() => {
-        window.location.href = webLink;
-      }, 1200);
-    } else {
-      window.location.href = webLink;
-    }
+    window.location.href = TELEGRAM_LINK;
   };
 
   return (
@@ -47,12 +34,12 @@ export const SocialProof = () => {
             <strong className="text-white ml-2">Cero mensualidades, acceso libre.</strong>
           </p>
 
-          <div className="mt-12">
-            <a
-                href={`tg://resolve?domain=${TELEGRAM_DOMAIN}`}
-                onClick={handleTelegramClick}
-                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-gray-950 rounded-full text-lg font-black hover:bg-[#D4AF37] hover:text-white transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(212,175,55,0.3)] uppercase tracking-wide"
-            >
+           <div className="mt-12">
+             <a
+                 href={TELEGRAM_LINK}
+                 onClick={handleTelegramClick}
+                 className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-gray-950 rounded-full text-lg font-black hover:bg-[#D4AF37] hover:text-white transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(212,175,55,0.3)] uppercase tracking-wide"
+             >
               <TelegramIcon className="!size-6" />
               VER CANAL AHORA
             </a>

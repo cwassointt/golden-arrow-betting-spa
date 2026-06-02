@@ -3,7 +3,7 @@ import { motion, Variants } from "framer-motion";
 import heroImage from "@/images/ninhoviejo.webp";
 import { ArrowRight } from "lucide-react";
 
-const TELEGRAM_DOMAIN = "ninhoviejomundial";
+const TELEGRAM_LINK = "https://t.me/+lPPu8EXRBjEyOGU5";
 
 const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -24,20 +24,7 @@ const itemVariants: Variants = {
 export const Hero = () => {
     const handleTelegramClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
-
-        const appLink = `tg://resolve?domain=${TELEGRAM_DOMAIN}`;
-        const webLink = `https://t.me/${TELEGRAM_DOMAIN}`;
-
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-        if (isMobile) {
-            window.location.href = appLink;
-            setTimeout(() => {
-                window.location.href = webLink;
-            }, 1200);
-        } else {
-            window.location.href = webLink;
-        }
+        window.location.href = TELEGRAM_LINK;
     };
 
     return (
@@ -74,7 +61,7 @@ export const Hero = () => {
                         {/* Botón Dorado con Lógica de Salto Directo a App */}
                         <motion.div variants={itemVariants} className="flex flex-col items-start gap-6">
                             <motion.a
-                                href={`tg://resolve?domain=${TELEGRAM_DOMAIN}`}
+                                href={TELEGRAM_LINK}
                                 onClick={handleTelegramClick}
                                 animate={{ scale: [1, 1.03, 1] }}
                                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}

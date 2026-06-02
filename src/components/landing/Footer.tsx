@@ -2,26 +2,13 @@ import { CrownSolidIcon } from "@/components/icons/CrownIcon";
 import { TelegramIcon, InstagramIcon } from "@/components/icons/TelegramIcon";
 import { Youtube, Music2, Gamepad2 } from "lucide-react";
 
-const TELEGRAM_DOMAIN = "ninhoviejomundial";
+const TELEGRAM_LINK = "https://t.me/+lPPu8EXRBjEyOGU5";
 const quickLinks = ["Inicio", "Resultados", "Sobre mí", "FAQ"];
 
 export const Footer = () => {
   const handleTelegramClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-
-    const appLink = `tg://resolve?domain=${TELEGRAM_DOMAIN}`;
-    const webLink = `https://t.me/${TELEGRAM_DOMAIN}`;
-
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-    if (isMobile) {
-      window.location.href = appLink;
-      setTimeout(() => {
-        window.location.href = webLink;
-      }, 1200);
-    } else {
-      window.location.href = webLink;
-    }
+    window.location.href = TELEGRAM_LINK;
   };
 
   return (
@@ -58,10 +45,10 @@ export const Footer = () => {
             <h4 className="font-display font-bold text-sm text-white tracking-widest uppercase">CONECTA CONMIGO</h4>
             <ul className="mt-4 space-y-3">
               <li>
-                <a href={`tg://resolve?domain=${TELEGRAM_DOMAIN}`} onClick={handleTelegramClick} className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-[#ED6A8E] transition-colors font-medium">
-                  <TelegramIcon className="h-5 w-5" />
-                  Telegram
-                </a>
+                <a href={TELEGRAM_LINK} onClick={handleTelegramClick} className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-[#ED6A8E] transition-colors font-medium">
+                   <TelegramIcon className="h-5 w-5" />
+                   Telegram
+                 </a>
               </li>
               <li>
                 <a href="https://www.instagram.com/ninhoviejo/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-[#ED6A8E] transition-colors font-medium">
@@ -90,12 +77,12 @@ export const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex md:justify-end">
-            <a 
-              href={`tg://resolve?domain=${TELEGRAM_DOMAIN}`} 
-              onClick={handleTelegramClick}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-[#ED6A8E] text-[#ED6A8E] rounded-full text-sm font-bold hover:bg-[#ED6A8E] hover:text-white transition-colors w-full md:w-auto h-fit"
-            >
+           <div className="flex md:justify-end">
+             <a
+               href={TELEGRAM_LINK}
+               onClick={handleTelegramClick}
+               className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-[#ED6A8E] text-[#ED6A8E] rounded-full text-sm font-bold hover:bg-[#ED6A8E] hover:text-white transition-colors w-full md:w-auto h-fit"
+             >
               <TelegramIcon className="!size-5" />
               UNIRME AL TELEGRAM
             </a>

@@ -1,25 +1,12 @@
 import { CrownIcon, TrophyOutlineIcon } from "@/components/icons/CrownIcon";
 import { TelegramIcon } from "@/components/icons/TelegramIcon";
 
-const TELEGRAM_DOMAIN = "ninhoviejomundial";
+const TELEGRAM_LINK = "https://t.me/+lPPu8EXRBjEyOGU5";
 
 export const FinalCTA = () => {
   const handleTelegramClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-
-    const appLink = `tg://resolve?domain=${TELEGRAM_DOMAIN}`;
-    const webLink = `https://t.me/${TELEGRAM_DOMAIN}`;
-
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-    if (isMobile) {
-      window.location.href = appLink;
-      setTimeout(() => {
-        window.location.href = webLink;
-      }, 1200);
-    } else {
-      window.location.href = webLink;
-    }
+    window.location.href = TELEGRAM_LINK;
   };
 
   return (
@@ -38,12 +25,12 @@ export const FinalCTA = () => {
             Entra a mi canal gratuito y empieza a ganar hoy mismo. Únete a miles de personas que ya están rentabilizando su pasión.
           </p>
 
-          <div className="mt-12">
-            <a
-                href={`tg://resolve?domain=${TELEGRAM_DOMAIN}`}
-                onClick={handleTelegramClick}
-                className="inline-flex items-center justify-center bg-white text-[#ED6A8E] px-12 py-6 rounded-full text-xl md:text-2xl font-black hover:bg-gray-50 shadow-[0_15px_40px_rgba(0,0,0,0.2)] transition-all hover:scale-105 hover:-translate-y-1 w-full md:w-auto uppercase tracking-wider animate-pulse hover:animate-none"
-            >
+           <div className="mt-12">
+             <a
+                 href={TELEGRAM_LINK}
+                 onClick={handleTelegramClick}
+                 className="inline-flex items-center justify-center bg-white text-[#ED6A8E] px-12 py-6 rounded-full text-xl md:text-2xl font-black hover:bg-gray-50 shadow-[0_15px_40px_rgba(0,0,0,0.2)] transition-all hover:scale-105 hover:-translate-y-1 w-full md:w-auto uppercase tracking-wider animate-pulse hover:animate-none"
+             >
               <TelegramIcon className="!size-8 mr-3" />
               UNIRME AL TELEGRAM
             </a>
