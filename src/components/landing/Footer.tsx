@@ -1,8 +1,7 @@
 import { CrownSolidIcon } from "@/components/icons/CrownIcon";
 import { TelegramIcon, InstagramIcon } from "@/components/icons/TelegramIcon";
 import { Youtube, Music2, Gamepad2 } from "lucide-react";
-
-const TELEGRAM_LINK = "https://t.me/+lPPu8EXRBjEyOGU5";
+import { TELEGRAM_LINK } from "@/config/constants";
 const quickLinks = ["Inicio", "Resultados", "Sobre mí", "FAQ"];
 
 export const Footer = () => {

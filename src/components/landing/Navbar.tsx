@@ -4,8 +4,7 @@ import { TelegramIcon } from "@/components/icons/TelegramIcon";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const TELEGRAM_LINK = "https://t.me/+lPPu8EXRBjEyOGU5";
+import { TELEGRAM_LINK } from "@/config/constants";
 
 const links = [
 	{ label: "Inicio", href: "#inicio", active: true },

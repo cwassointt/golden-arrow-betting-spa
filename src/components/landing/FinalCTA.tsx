@@ -1,7 +1,6 @@
 import { CrownIcon, TrophyOutlineIcon } from "@/components/icons/CrownIcon";
 import { TelegramIcon } from "@/components/icons/TelegramIcon";
-
-const TELEGRAM_LINK = "https://t.me/+lPPu8EXRBjEyOGU5";
+import { TELEGRAM_LINK } from "@/config/constants";
 
 export const FinalCTA = () => {
   const handleTelegramClick = (e: React.MouseEvent<HTMLAnchorElement>) => {

@@ -2,8 +2,7 @@ import { TelegramIcon } from "@/components/icons/TelegramIcon";
 import { motion, Variants } from "framer-motion";
 import heroImage from "@/images/ninhoviejo.webp";
 import { ArrowRight } from "lucide-react";
-
-const TELEGRAM_LINK = "https://t.me/+lPPu8EXRBjEyOGU5";
+import { TELEGRAM_LINK } from "@/config/constants";
 
 const containerVariants: Variants = {
     hidden: { opacity: 0 },
