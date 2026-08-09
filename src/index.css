@@ -115,7 +115,7 @@
     display: inline-flex;
     align-items: center;
     min-height: 2.75rem;
-    color: var(--color-ink);
+    color: oklch(96% 0.008 38);
     font-family: var(--font-wordmark);
     font-size: var(--text-brand);
     font-weight: 800;
@@ -130,13 +130,13 @@
     height: 0.55rem;
     margin-inline-end: var(--space-xs);
     border-radius: var(--radius-dot);
-    background: var(--color-accent);
+    background: oklch(96% 0.008 38);
     content: "";
   }
 
   .brand-mark:focus-visible,
   .community-cta:focus-visible {
-    outline: var(--rule-focus) solid var(--color-focus);
+    outline: var(--rule-focus) solid oklch(82% 0.21 350);
     outline-offset: 4px;
   }
 
@@ -178,7 +178,7 @@
   .hero-title {
     width: min(52vw, 48rem);
     margin: 0;
-    color: var(--color-ink);
+    color: oklch(96% 0.008 38);
     font-family: var(--font-display);
     font-size: var(--text-display);
     font-style: normal;
@@ -208,7 +208,7 @@
   .hero-subcopy {
     max-width: 31rem;
     margin: var(--space-lg) 0 0;
-    color: var(--color-ink-2);
+    color: oklch(95% 0.008 38 / 0.87);
     font-size: var(--text-md);
     font-weight: 500;
     line-height: 1.45;
@@ -226,11 +226,11 @@
     margin-block-start: var(--space-xl);
     padding: 0 clamp(1.25rem, 2.5vw, 2rem);
     gap: var(--space-sm);
-    border: var(--rule-thin) solid var(--color-accent);
+    border: var(--rule-thin) solid oklch(96% 0.008 38);
     border-radius: var(--radius-cta);
-    background: var(--color-accent);
-    box-shadow: 0 1.4rem 3rem -1.6rem var(--color-accent-shadow);
-    color: var(--color-accent-ink);
+    background: oklch(96% 0.008 38);
+    box-shadow: 0 1.4rem 3rem -1.6rem oklch(20% 0.01 18 / 0.2);
+    color: oklch(10.5% 0.014 18);
     font-family: var(--font-body);
     font-size: var(--text-sm);
     font-weight: 800;
@@ -265,9 +265,9 @@
 
   @media (hover: hover) and (pointer: fine) {
     .community-cta:hover {
-      border-color: var(--color-accent-hover);
-      background: var(--color-accent-hover);
-      box-shadow: 0 1.6rem 3.2rem -1.55rem var(--color-accent-shadow);
+      border-color: oklch(92% 0.008 38);
+      background: oklch(92% 0.008 38);
+      box-shadow: 0 1.6rem 3.2rem -1.55rem oklch(20% 0.01 18 / 0.25);
       transform: translateY(-2px);
     }
   }

@@ -28,29 +28,40 @@
   --color-accent-shadow: oklch(55% 0.19 350 / 0.34);
 
   --gradient-hero:
-    radial-gradient(circle at 18% 43%, var(--color-accent-glow), var(--color-transparent) 34rem),
-    linear-gradient(115deg, var(--color-paper) 0%, var(--color-paper-deep) 100%);
+    linear-gradient(
+      90deg,
+      oklch(55% 0.16 350) 0%,
+      oklch(62% 0.18 350) 24%,
+      oklch(68% 0.19 350) 42%,
+      oklch(68% 0.19 350 / 0.88) 52%,
+      oklch(68% 0.19 350 / 0.42) 64%,
+      oklch(68% 0.19 350 / 0.08) 78%,
+      transparent 100%
+    );
   --gradient-photo-blend:
     linear-gradient(
       90deg,
-      var(--color-paper) 0%,
-      var(--color-paper-strong) 16%,
-      var(--color-paper-veil) 36%,
-      var(--color-paper-soft) 58%,
-      var(--color-transparent) 100%
+      oklch(68% 0.19 350 / 1) 0%,
+      oklch(68% 0.19 350 / 0.92) 14%,
+      oklch(68% 0.19 350 / 0.72) 28%,
+      oklch(68% 0.19 350 / 0.48) 42%,
+      oklch(68% 0.19 350 / 0.24) 56%,
+      oklch(68% 0.19 350 / 0.06) 72%,
+      transparent 100%
     ),
     linear-gradient(
       180deg,
       var(--color-transparent) 0%,
       var(--color-transparent) 70%,
-      var(--color-paper-faint) 100%
+      oklch(68% 0.19 350 / 0.08) 100%
     );
   --gradient-mobile-photo:
     linear-gradient(
       180deg,
-      var(--color-transparent) 0%,
-      var(--color-transparent) 62%,
-      var(--color-paper-soft) 100%
+      oklch(68% 0.19 350 / 0.6) 0%,
+      oklch(68% 0.19 350 / 0.4) 40%,
+      oklch(68% 0.19 350 / 0.15) 70%,
+      var(--color-transparent) 100%
     );
 
   --font-display: "Bricolage Grotesque", "Montserrat", ui-sans-serif, system-ui, sans-serif;
