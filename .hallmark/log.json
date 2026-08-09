@@ -1,0 +1,24 @@
+[
+  {
+    "date": "2026-08-09",
+    "macrostructure": "Photographic",
+    "theme": "custom",
+    "theme_axes": "dark / photographic-display / restrained-fuchsia",
+    "vibe": "cinematic creator, warm off-black, fuchsia action",
+    "enrichment": "existing photography",
+    "nav": "N9 Edge-aligned minimal",
+    "footer": "omitted",
+    "brief": "NINHOVIEJO full-screen photographic community hero"
+  },
+  {
+    "date": "2026-08-09",
+    "macrostructure": "Split Studio",
+    "theme": "custom",
+    "theme_axes": "dark / display-heavy / chromatic-dusty-pink",
+    "vibe": "premium creator, off-black, fuchsia restraint",
+    "enrichment": "photographic asset",
+    "nav": "N9 Edge-aligned minimal",
+    "footer": "Ft2 Inline single line",
+    "brief": "NINHOVIEJO community landing simplification"
+  }
+]
