@@ -1,54 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { CrownSolidIcon } from "@/components/icons/CrownIcon";
-import { TelegramIcon } from "@/components/icons/TelegramIcon";
-import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { TelegramIcon, InstagramIcon } from "@/components/icons/TelegramIcon";
+import { useState } from "react";
+import { Menu, X, Gamepad2, Music2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { TELEGRAM_LINK } from "@/config/constants";
 
-const links = [
-	{ label: "Inicio", href: "#inicio", active: true },
-	{ label: "Resultados", href: "#resultados" },
-	{ label: "Sobre Mí", href: "#sobre-mi" },
-	{ label: "FAQ", href: "#faq" },
+const socialLinks = [
+	{ label: "TikTok", href: "https://www.tiktok.com/@ninhoviejo_oficial", icon: Music2 },
+	{ label: "Instagram", href: "https://www.instagram.com/ninhoviejo/", icon: InstagramIcon },
+	{ label: "Kick", href: "https://kick.com/ninhoviejo", icon: Gamepad2 },
 ];
 
 export const Navbar = () => {
 	const [open, setOpen] = useState(false);
-	const [isScrolled, setIsScrolled] = useState(false);
-	const [activeSection, setActiveSection] = useState<string | null>("inicio");
-
-	useEffect(() => {
-		const onScroll = () => {
-			setIsScrolled(window.scrollY > 20);
-		};
-		window.addEventListener("scroll", onScroll);
-		return () => window.removeEventListener("scroll", onScroll);
-	}, []);
-
-	useEffect(() => {
-		const options = {
-			root: null,
-			rootMargin: "-120px 0px 0px 0px",
-			threshold: 0.1,
-		};
-
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					setActiveSection(entry.target.id);
-				}
-			});
-		}, options);
-
-		links.forEach((l) => {
-			const id = l.href.replace("#", "");
-			const element = document.getElementById(id);
-			if (element) observer.observe(element);
-		});
-
-		return () => observer.disconnect();
-	}, []);
 
 	const handleScroll = () => {
 		setOpen(false);
@@ -73,9 +38,7 @@ export const Navbar = () => {
 				animate={{ y: 0, opacity: 1 }} 
 				transition={{ duration: 0.6, ease: "easeOut" }}
 				className={`fixed top-[40px] left-0 right-0 mx-auto z-[60] max-w-5xl rounded-full shadow-xl flex justify-between items-center px-6 transition-colors duration-500 ease-in-out ${
-					isScrolled 
-						? "bg-white/95 backdrop-blur-md mt-2 py-2" 
-						: "bg-white/90 backdrop-blur mt-4 py-3"
+					"bg-white/90 backdrop-blur mt-4 py-3"
 				}`}
 			>
 				<a href="#inicio" onClick={handleScroll} className="flex items-center gap-2 transition-transform hover:scale-105">
@@ -85,22 +48,23 @@ export const Navbar = () => {
 					</span>
 				</a>
 
-				<ul className="hidden lg:flex items-center gap-8">
-					{links.map((l) => (
-						<li key={l.label}>
-							<a
-								href={l.href}
-								onClick={handleScroll}
-								className={`text-sm font-bold uppercase tracking-widest transition-all duration-300 relative pb-1 ${
-									activeSection === l.href.replace("#", "") 
-										? "text-[#ED6A8E] scale-105 drop-shadow-sm" 
-										: "text-gray-700 hover:text-[#ED6A8E]"
-								}`}
-							>
-								{l.label}
-							</a>
-						</li>
-					))}
+				<ul className="hidden lg:flex items-center gap-6">
+					{socialLinks.map((link) => {
+						const Icon = link.icon;
+						return (
+							<li key={link.label}>
+								<a
+									href={link.href}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-gray-700 hover:text-[#ED6A8E] transition-colors"
+								>
+									<Icon className="h-5 w-5" />
+									{link.label}
+								</a>
+							</li>
+						);
+					})}
 				</ul>
 
 				<div className="hidden md:block">
@@ -135,20 +99,22 @@ export const Navbar = () => {
 							transition={{ duration: 0.2, ease: "easeInOut" }}
 							className="lg:hidden absolute top-[100%] left-0 w-full mt-2 rounded-2xl shadow-xl border border-border bg-white p-6 space-y-5"
 						>
-							{links.map((l) => (
-								<a
-									key={l.label}
-									href={l.href}
-									onClick={handleScroll}
-									className={`block text-sm font-bold tracking-widest transition-colors duration-300 ${
-										activeSection === l.href.replace("#", "")
-											? "text-[#ED6A8E]"
-											: "text-foreground hover:text-primary"
-									}`}
-								>
-									{l.label}
-								</a>
-							))}
+							{socialLinks.map((link) => {
+								const Icon = link.icon;
+								return (
+									<a
+										key={link.label}
+										href={link.href}
+										target="_blank"
+										rel="noopener noreferrer"
+										onClick={handleScroll}
+										className="flex items-center gap-3 text-sm font-bold tracking-widest text-foreground hover:text-primary transition-colors duration-300"
+									>
+										<Icon className="h-5 w-5" />
+										{link.label}
+									</a>
+								);
+							})}
 							<Button variant="cta" size="pill" className="w-full bg-black hover:bg-gray-800 text-white font-bold" asChild>
 								<a
 									href={TELEGRAM_LINK}

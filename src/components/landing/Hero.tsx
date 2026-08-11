@@ -30,7 +30,7 @@ export const Hero = () => {
         <>
             <section
                 id="inicio"
-                className="relative w-full min-h-[850px] lg:min-h-[95vh] bg-gray-900 bg-no-repeat bg-cover bg-[center_top] md:bg-[60%_20%] lg:bg-[80%_55%] flex items-center pt-32 md:pt-48 pb-20 overflow-hidden"
+                className="relative w-full min-h-[100dvh] bg-gray-900 bg-no-repeat bg-cover bg-[center_top] md:bg-[60%_20%] lg:bg-[80%_55%] flex items-center pt-32 md:pt-48 pb-20 overflow-hidden"
                 style={{ backgroundImage: `url(${heroImage})` }}
             >
                 <div className="absolute inset-0 bg-gradient-to-r from-[#ED6A8E] from-10% via-[#ED6A8E]/90 via-45% to-transparent to-90% z-10"></div>
@@ -44,17 +44,16 @@ export const Hero = () => {
                     >
                         {/* Título optimizado para evitar filtros de contenido sensible */}
                         <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter italic uppercase mb-6">
-                            <span className="block text-white">TRABAJA CONMIGO</span>
-                            <span className="block font-black text-white">ESTE MUNDIAL</span>
-                            <span className="text-gray-900 block font-black">ACCESO LIBRE HOY</span>
+                            <span className="block text-white">COMUNIDAD DE NIÑO VIEJO</span>
+                            <span className="text-gray-900 block font-black">ACCEDE SIN COSTO</span>
                         </motion.h1>
 
                         {/* Jerarquía en móvil ajustada */}
                         <motion.h2 variants={itemVariants} className="text-lg md:text-3xl text-white font-extrabold mb-2 opacity-90">
-                            Domina el análisis deportivo con mi metodología probada.
+                            Únete a la comunidad oficial de Niño Viejo.
                         </motion.h2>
                         <motion.p variants={itemVariants} className="text-sm md:text-xl text-white/80 max-w-xl mb-12 font-medium leading-tight md:leading-normal">
-                            Únete a mi comunidad estratégica y empieza a ver resultados hoy mismo <strong className="text-gray-900 font-black">sin costos de inscripción.</strong>
+                            Acceso libre, directo y totalmente <strong className="text-gray-900 font-black">sin costos de inscripción.</strong>
                         </motion.p>
 
                         {/* Botón Dorado con Lógica de Salto Directo a App */}
