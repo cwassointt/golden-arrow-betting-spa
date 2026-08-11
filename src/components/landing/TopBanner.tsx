@@ -3,7 +3,7 @@ export const TopBanner = () => {
         <>
             <span>Únete al grupo: <span className="font-black">Acceso Libre</span></span>
             <span className="mx-4">•</span>
-            <span>Análisis deportivo: <span className="font-black">Sin Cuotas</span></span>
+            <span>Comunidad oficial: <span className="font-black">Sin Costo</span></span>
             <span className="mx-4">•</span>
             <span>Inicia ahora: <span className="font-black">Sin Registro</span></span>
             <span className="mx-4">•</span>
