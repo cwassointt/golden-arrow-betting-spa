@@ -1,5 +1,5 @@
 import { TelegramIcon } from "@/components/icons/TelegramIcon";
-import { motion, Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import heroImage from "@/images/ninhoviejo.webp";
 import { ArrowRight } from "lucide-react";
 import { TELEGRAM_LINK } from "@/config/constants";
@@ -16,91 +16,202 @@ const containerVariants: Variants = {
 };
 
 const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    hidden: {
+        opacity: 0,
+        y: 20,
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.6,
+            ease: "easeOut",
+        },
+    },
 };
 
 export const Hero = () => {
-    const handleTelegramClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault();
-        window.location.href = TELEGRAM_LINK;
-    };
-
     return (
-        <>
-            <section
-                id="inicio"
-                className="relative w-full min-h-[100dvh] bg-gray-900 bg-no-repeat bg-cover bg-[center_top] md:bg-[60%_20%] lg:bg-[80%_55%] flex items-center pt-32 md:pt-48 pb-20 overflow-hidden"
-                style={{ backgroundImage: `url(${heroImage})` }}
-            >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#ED6A8E] from-10% via-[#ED6A8E]/90 via-45% to-transparent to-90% z-10"></div>
+        <section
+            id="inicio"
+            className="relative w-full min-h-[100dvh] bg-gray-900 bg-no-repeat bg-cover bg-[center_top] md:bg-[60%_20%] lg:bg-[80%_55%] flex items-center pt-32 md:pt-48 pb-20 overflow-hidden"
+            style={{ backgroundImage: `url(${heroImage})` }}
+        >
+            {/* Integración rosa con la fotografía */}
+            <div
+                className="
+                    absolute inset-0 z-10
+                    bg-gradient-to-r
+                    from-[#ED6A8E]
+                    from-10%
+                    via-[#ED6A8E]/90
+                    via-45%
+                    to-transparent
+                    to-90%
+                "
+            />
 
-                <div className="container mx-auto px-6 relative z-20">
-                    <motion.div
-                        variants={containerVariants}
-                        initial="hidden"
-                        animate="show"
-                        className="max-w-4xl"
+            <div className="container mx-auto px-6 relative z-20">
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="show"
+                    className="max-w-4xl"
+                >
+                    {/* Título principal */}
+                    <motion.h1
+                        variants={itemVariants}
+                        className="
+                            text-5xl
+                            md:text-7xl
+                            lg:text-8xl
+                            font-black
+                            text-white
+                            leading-[0.9]
+                            tracking-tighter
+                            italic
+                            uppercase
+                            mb-6
+                        "
                     >
-                        {/* Título optimizado para evitar filtros de contenido sensible */}
-                        <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter italic uppercase mb-6">
-                            <span className="block text-white">COMUNIDAD DE NIÑO VIEJO</span>
-                            <span className="text-gray-900 block font-black">ACCEDE SIN COSTO</span>
-                        </motion.h1>
+                        <span className="block text-white">
+                            COMUNIDAD DE NIÑO VIEJO
+                        </span>
 
-                        {/* Jerarquía en móvil ajustada */}
-                        <motion.h2 variants={itemVariants} className="text-lg md:text-3xl text-white font-extrabold mb-2 opacity-90">
-                            Únete a la comunidad oficial de Niño Viejo.
-                        </motion.h2>
-                        <motion.p variants={itemVariants} className="text-sm md:text-xl text-white/80 max-w-xl mb-12 font-medium leading-tight md:leading-normal">
-                            Acceso libre, directo y totalmente <strong className="text-gray-900 font-black">sin costos de inscripción.</strong>
-                        </motion.p>
+                        <span className="block text-gray-900 font-black">
+                            ACCEDE SIN COSTO
+                        </span>
+                    </motion.h1>
 
-                        {/* Botón Dorado con Lógica de Salto Directo a App */}
-                        <motion.div variants={itemVariants} className="flex flex-col items-start gap-6">
-                            <motion.a
-                                href={TELEGRAM_LINK}
-                                onClick={handleTelegramClick}
-                                animate={{ scale: [1, 1.03, 1] }}
-                                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                                className="group relative inline-flex flex-col md:flex-row items-center justify-center bg-[#D4AF37] hover:bg-[#b8952e] text-black px-10 py-8 md:px-16 md:py-10 rounded-2xl shadow-[0_0_50px_rgba(212,175,55,0.4)] transition-all active:scale-95 gap-4 overflow-hidden border-b-8 border-[#9a7d21]"
-                            >
-                                <motion.div
-                                    animate={{ x: ['-100%', '200%'] }}
-                                    transition={{ duration: 3, repeat: Infinity, ease: "linear", repeatDelay: 1 }}
-                                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12 z-0"
-                                />
+                    {/* Texto secundario */}
+                    <motion.h2
+                        variants={itemVariants}
+                        className="text-lg md:text-3xl text-white font-extrabold mb-2"
+                    >
+                        Únete a la comunidad oficial de Niño Viejo.
+                    </motion.h2>
 
-                                <div className="relative z-10 flex items-center gap-4">
-                                    <TelegramIcon className="!size-10 md:!size-14 shrink-0 drop-shadow-md" />
-                                    <div className="flex flex-col items-start text-left">
-                    <span className="text-2xl md:text-4xl font-black uppercase tracking-tighter leading-none">
-                      UNIRME AL CANAL
-                    </span>
-                                        <span className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-none">
-                      GRATUITO AHORA
-                    </span>
-                                    </div>
-                                    <ArrowRight className="hidden md:block size-10 group-hover:translate-x-2 transition-transform duration-300" />
+                    <motion.p
+                        variants={itemVariants}
+                        className="
+                            text-sm
+                            md:text-xl
+                            text-white/90
+                            max-w-xl
+                            mb-12
+                            font-medium
+                            leading-tight
+                            md:leading-normal
+                        "
+                    >
+                        Acceso libre, directo y totalmente{" "}
+                        <strong className="text-gray-900 font-black">
+                            sin costo.
+                        </strong>
+                    </motion.p>
+
+                    {/* CTA principal */}
+                    <motion.div
+                        variants={itemVariants}
+                        className="flex flex-col items-start gap-6"
+                    >
+                        <motion.a
+                            href={TELEGRAM_LINK}
+                            aria-label="Unirme al canal gratuito de Niño Viejo en Telegram"
+                            animate={{
+                                scale: [1, 1.03, 1],
+                            }}
+                            transition={{
+                                duration: 2,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                            }}
+                            whileHover={{
+                                y: -2,
+                            }}
+                            className="
+                                group
+                                relative
+                                inline-flex
+                                flex-col
+                                md:flex-row
+                                items-center
+                                justify-center
+                                bg-[#D4AF37]
+                                hover:bg-[#b8952e]
+                                text-black
+                                px-10
+                                py-8
+                                md:px-16
+                                md:py-10
+                                rounded-2xl
+                                shadow-[0_0_50px_rgba(212,175,55,0.4)]
+                                transition-all
+                                active:scale-95
+                                gap-4
+                                overflow-hidden
+                                border-b-8
+                                border-[#9a7d21]
+                            "
+                        >
+                            {/* Brillo sutil */}
+                            <motion.div
+                                aria-hidden="true"
+                                animate={{
+                                    x: ["-100%", "200%"],
+                                }}
+                                transition={{
+                                    duration: 3,
+                                    repeat: Infinity,
+                                    ease: "linear",
+                                    repeatDelay: 1,
+                                }}
+                                className="
+                                    absolute
+                                    inset-0
+                                    bg-gradient-to-r
+                                    from-transparent
+                                    via-white/40
+                                    to-transparent
+                                    skew-x-12
+                                    z-0
+                                    pointer-events-none
+                                "
+                            />
+
+                            <div className="relative z-10 flex items-center gap-4">
+                                <TelegramIcon className="!size-10 md:!size-14 shrink-0 drop-shadow-md" />
+
+                                <div className="flex flex-col items-start text-left">
+                                    <span className="text-2xl md:text-4xl font-black uppercase tracking-tighter leading-none">
+                                        UNIRME AL CANAL
+                                    </span>
+
+                                    <span className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-none">
+                                        GRATUITO AHORA
+                                    </span>
                                 </div>
-                            </motion.a>
 
-                            {/* Indicador de urgencia */}
-                            <div className="flex items-center gap-2 pl-2">
-                <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                </span>
-                                <span className="text-sm md:text-base text-white font-bold uppercase tracking-widest drop-shadow-sm">
-                  Cupos de acceso libre disponibles hoy
-                </span>
+                                <ArrowRight
+                                    className="
+                                        hidden
+                                        md:block
+                                        size-10
+                                        group-hover:translate-x-2
+                                        transition-transform
+                                        duration-300
+                                    "
+                                />
                             </div>
-                        </motion.div>
-                    </motion.div>
-                </div>
+                        </motion.a>
 
-                <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-900 to-transparent z-10"></div>
-            </section>
-        </>
+                        {/* Mensaje simple, sin urgencia artificial */}
+                        <span className="text-sm md:text-base text-white/90 font-bold uppercase tracking-widest">
+                            Acceso libre y totalmente sin costo
+                        </span>
+                    </motion.div>
+                </motion.div>
+            </div>
+        </section>
     );
 };
